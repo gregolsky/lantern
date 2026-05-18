@@ -1,0 +1,112 @@
+{
+  "version": "NIS2 Directive — EU 2022/2555",
+  "note": "EU legislation — free reuse with attribution per Decision 2011/833/EU. Measures from Article 21; reporting from Article 23.",
+  "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+  "controls": [
+    {
+      "id": "Art.21(2)(a)",
+      "title": "Risk analysis and information system security policies",
+      "description": "Policies on risk analysis and information system security, covering documentation of the risk management approach, risk appetite, and security objectives.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(b)",
+      "title": "Incident handling",
+      "description": "Policies and procedures for handling cybersecurity incidents, including detection, response, recovery, and documentation of lessons learned.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(c)",
+      "title": "Business continuity and crisis management",
+      "description": "Business continuity management, including backup management, disaster recovery, and crisis management during and after cybersecurity incidents.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(d)",
+      "title": "Supply chain security",
+      "description": "Security in supply chains, including security-related aspects concerning the relationships between each entity and its direct suppliers or service providers.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(e)",
+      "title": "Security in network and information systems acquisition, development and maintenance",
+      "description": "Security in the acquisition, development and maintenance of network and information systems, including vulnerability handling and disclosure.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(f)",
+      "title": "Policies and procedures to assess cybersecurity risk-management effectiveness",
+      "description": "Policies and procedures to assess the effectiveness of cybersecurity risk-management measures, including regular reviews and independent audits.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(g)",
+      "title": "Cybersecurity hygiene practices and training",
+      "description": "Basic cyber hygiene practices and cybersecurity training for all staff, including awareness programs covering phishing, password hygiene, and social engineering.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(h)",
+      "title": "Cryptography and encryption policies",
+      "description": "Policies and procedures regarding the use of cryptography and, where appropriate, encryption, including key management.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(i)",
+      "title": "Human resources security, access control policies and asset management",
+      "description": "Human resources security, access control policies and asset management, including multi-factor authentication or continuous authentication solutions, secured voice/video/text communications, and secured emergency communication systems.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(2)(j)",
+      "title": "Multi-factor authentication and secure communications",
+      "description": "Use of multi-factor authentication or continuous authentication solutions, secured voice, video and text communications and secured emergency communication systems within the entity.",
+      "category": "Article 21 — Cybersecurity Risk-Management Measures",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.23(1)",
+      "title": "Early warning — significant incident notification",
+      "description": "Without undue delay, and in any event within 24 hours of becoming aware of a significant incident, notify the CSIRT or competent authority via early warning.",
+      "category": "Article 23 — Reporting Obligations",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.23(4)(a)",
+      "title": "Incident notification — within 72 hours",
+      "description": "Submit incident notification within 72 hours of becoming aware, including initial assessment of severity, impact, and indicators of compromise.",
+      "category": "Article 23 — Reporting Obligations",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.23(4)(b)",
+      "title": "Intermediate report (on request)",
+      "description": "Provide an intermediate status report upon request of the CSIRT or competent authority.",
+      "category": "Article 23 — Reporting Obligations",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.23(4)(c)",
+      "title": "Final incident report — within 1 month",
+      "description": "Submit a final report within one month of the incident notification, including root cause analysis, mitigation measures taken, and cross-border impact.",
+      "category": "Article 23 — Reporting Obligations",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21(1)",
+      "title": "Proportionate technical, operational and organisational measures",
+      "description": "Entities shall take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems. Measures shall be based on an all-hazards approach.",
+      "category": "Article 21 — General Obligation",
+      "applicability": "required"
+    }
+  ]
+}

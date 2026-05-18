@@ -1,0 +1,182 @@
+{
+  "version": "GDPR — Regulation (EU) 2016/679",
+  "note": "EU legislation — free reuse with attribution per Decision 2011/833/EU.",
+  "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+  "controls": [
+    {
+      "id": "Art.5",
+      "title": "Principles relating to processing of personal data",
+      "description": "Personal data shall be processed lawfully, fairly, transparently; collected for specified, explicit and legitimate purposes; adequate, relevant and limited; accurate; kept no longer than necessary; processed securely.",
+      "category": "Principles",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.6",
+      "title": "Lawfulness of processing",
+      "description": "Processing is lawful only if at least one legal basis applies: consent, contract, legal obligation, vital interests, public task, or legitimate interests.",
+      "category": "Principles",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.9",
+      "title": "Processing of special categories of personal data",
+      "description": "Processing of sensitive data (health, biometric, racial origin, political opinion etc.) is prohibited unless an explicit exception applies.",
+      "category": "Principles",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.13",
+      "title": "Information to be provided — data collected from the data subject",
+      "description": "At the time of collection, provide data subjects with identity of controller, purposes, legal basis, recipients, retention period, and data subject rights.",
+      "category": "Transparency",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.14",
+      "title": "Information to be provided — data not obtained from the data subject",
+      "description": "Where data is not collected directly from the data subject, provide equivalent notice within a reasonable period or at first communication.",
+      "category": "Transparency",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.15",
+      "title": "Right of access by the data subject",
+      "description": "Data subjects have the right to obtain confirmation of whether their personal data is being processed and to receive a copy, with details of the processing.",
+      "category": "Data Subject Rights",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.16",
+      "title": "Right to rectification",
+      "description": "Data subjects have the right to have inaccurate personal data corrected without undue delay.",
+      "category": "Data Subject Rights",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.17",
+      "title": "Right to erasure ('right to be forgotten')",
+      "description": "Data subjects have the right to erasure of personal data without undue delay in specified circumstances.",
+      "category": "Data Subject Rights",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.18",
+      "title": "Right to restriction of processing",
+      "description": "Data subjects have the right to obtain restriction of processing in specified circumstances (contested accuracy, unlawful processing, etc.).",
+      "category": "Data Subject Rights",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.20",
+      "title": "Right to data portability",
+      "description": "Data subjects have the right to receive their personal data in a structured, commonly used, machine-readable format and to transmit it to another controller.",
+      "category": "Data Subject Rights",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.21",
+      "title": "Right to object",
+      "description": "Data subjects have the right to object to processing based on legitimate interests, direct marketing, or research/statistics.",
+      "category": "Data Subject Rights",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.22",
+      "title": "Automated individual decision-making, including profiling",
+      "description": "Data subjects have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal or similarly significant effects.",
+      "category": "Data Subject Rights",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.25",
+      "title": "Data protection by design and by default",
+      "description": "Implement appropriate technical and organisational measures (e.g. pseudonymisation, data minimisation) both at the time of design and by default during processing.",
+      "category": "Security & Accountability",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.28",
+      "title": "Processor",
+      "description": "Controllers may only use processors providing sufficient guarantees; must have a written contract specifying the subject-matter, nature, purpose, type of data, and obligations.",
+      "category": "Security & Accountability",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.30",
+      "title": "Records of processing activities (RoPA)",
+      "description": "Controllers (and processors) must maintain records of processing activities including purposes, categories of data, recipients, international transfers, and retention periods.",
+      "category": "Security & Accountability",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.32",
+      "title": "Security of processing",
+      "description": "Implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk, including encryption, pseudonymisation, confidentiality, integrity, availability, and resilience.",
+      "category": "Security & Accountability",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.33",
+      "title": "Notification of a personal data breach to the supervisory authority",
+      "description": "In the case of a personal data breach, notify the supervisory authority without undue delay and, where feasible, not later than 72 hours after becoming aware.",
+      "category": "Breach Notification",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.34",
+      "title": "Communication of a personal data breach to the data subject",
+      "description": "When a breach is likely to result in a high risk to individuals, communicate the breach to the affected data subjects without undue delay.",
+      "category": "Breach Notification",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.35",
+      "title": "Data protection impact assessment (DPIA)",
+      "description": "Prior to processing that is likely to result in a high risk, carry out a DPIA. Required when using new technologies, large-scale processing of sensitive data, or systematic monitoring.",
+      "category": "Security & Accountability",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.37",
+      "title": "Designation of the data protection officer (DPO)",
+      "description": "Designate a DPO when processing is carried out by a public authority, involves large-scale systematic monitoring, or large-scale processing of special categories or criminal conviction data.",
+      "category": "DPO",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.38",
+      "title": "Position of the data protection officer",
+      "description": "The DPO shall be involved in all data protection matters, operate independently, report to the highest management level, and be accessible to data subjects.",
+      "category": "DPO",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.39",
+      "title": "Tasks of the data protection officer",
+      "description": "The DPO's tasks include: informing and advising on obligations, monitoring compliance, cooperating with the supervisory authority, and acting as contact point.",
+      "category": "DPO",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.44",
+      "title": "General principle for transfers",
+      "description": "Transfer of personal data to a third country may only take place if the conditions in Chapter V are complied with (adequacy decision, appropriate safeguards, or derogations).",
+      "category": "International Transfers",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.45",
+      "title": "Transfers on the basis of an adequacy decision",
+      "description": "Transfer is permitted where the Commission has decided that the third country ensures an adequate level of protection.",
+      "category": "International Transfers",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.46",
+      "title": "Transfers subject to appropriate safeguards",
+      "description": "In the absence of an adequacy decision, transfers may occur where appropriate safeguards are in place (e.g. Standard Contractual Clauses, Binding Corporate Rules, approved codes of conduct).",
+      "category": "International Transfers",
+      "applicability": "conditional"
+    }
+  ]
+}

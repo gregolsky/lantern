@@ -1,0 +1,1079 @@
+[
+  {
+    "id": "INC-MGT",
+    "title": "Incident Management Programme",
+    "domain": "Incident Response",
+    "description": "Establish and maintain a formal information security incident management programme covering planning, roles, procedures, communication, and continuous improvement.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.24", "A.5.25"],
+        "summary": "Incident management planning and preparation; assessment and decision on security events",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC7.2", "CC7.3"],
+        "summary": "Detect anomalies and security incidents through monitoring; evaluate and respond to identified incidents",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(b)"],
+        "summary": "Policies and procedures for handling cybersecurity incidents — must cover detection, response, recovery, and lessons learned",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(6)(i)", "§164.308(a)(6)(ii)"],
+        "summary": "Security incident procedures: identify, respond to, document incidents and their outcomes. Unique: HIPAA also requires a sanctions policy (§164.308(a)(1)(ii)(C)) for workforce members who violate procedures — the only framework with an explicit workforce-sanction requirement",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Appropriate technical and organisational measures must include incident handling as a security measure",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT",
+    "title": "Security Incident Reporting",
+    "domain": "Incident Response",
+    "description": "Report confirmed or suspected security incidents to the appropriate internal teams and external authorities within required timeframes. Frameworks diverge sharply on timelines: NIS2 requires initial notification within 24h; GDPR within 72h; HIPAA allows 60 days. See child controls for per-framework deadlines.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.26", "A.6.8"],
+        "summary": "Response to incidents; A.6.8 requires all workforce to report suspected security events promptly. ISO sets no specific external-reporting deadline — that is determined by applicable law (NIS2, GDPR, etc.)",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC7.3", "CC7.4", "CC7.5"],
+        "summary": "Respond to incidents; contain and document impact; CC7.5 requires communicating to affected parties and regulators — SOC2 sets no specific timeline, relying on contractual and regulatory obligations",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.23(1)", "Art.23(4)(a)", "Art.23(4)(c)"],
+        "summary": "Three-stage reporting to CSIRT/authority: 24h early warning → 72h notification → 1-month final report. Strictest timeline of any framework — 3× faster than GDPR for initial notification",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(6)(ii)"],
+        "summary": "Respond to and document security incidents and their outcomes. HIPAA Security Rule incident reporting is internal; external breach notification (to individuals and HHS) is governed by the separate Breach Notification Rule — see child controls",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.33", "Art.34"],
+        "summary": "72h breach notification to supervisory authority; notification to data subjects 'without undue delay' when high risk — GDPR uniquely requires assessing individual risk to trigger subject notification (NIS2 does not require subject notification; HIPAA requires individual notification regardless of risk level)",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT-NIS2",
+    "title": "NIS2 — Early warning within 24h",
+    "domain": "Incident Response",
+    "description": "Without undue delay, and within 24 hours of becoming aware of a significant incident, submit an early warning to the competent CSIRT or national authority.",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "NIS2": {
+        "refs": ["Art.23(1)"],
+        "threshold": "24 hours from awareness — fastest mandatory reporting deadline across all five frameworks",
+        "summary": "Indicate whether incident is suspected to be malicious, whether it has cross-border impact, and which sectors/services are affected. No equivalent obligation in GDPR, HIPAA, or SOC2",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT-NIS2-72",
+    "title": "NIS2 — Incident notification within 72h",
+    "domain": "Incident Response",
+    "description": "Submit a full incident notification within 72 hours including initial severity assessment, indicators of compromise, and affected services.",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "NIS2": {
+        "refs": ["Art.23(4)(a)"],
+        "threshold": "72 hours from awareness",
+        "summary": "Full incident notification: initial assessment of severity, affected services, indicators of compromise, and whether a cross-border impact is likely. Aligns with GDPR 72h supervisory-authority deadline but NIS2 notification goes to CSIRT/competent authority, not a data protection authority",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT-NIS2-FINAL",
+    "title": "NIS2 — Final incident report within 1 month",
+    "domain": "Incident Response",
+    "description": "Submit a comprehensive final report within one month of the incident notification, including root cause analysis and cross-border impact assessment.",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "NIS2": {
+        "refs": ["Art.23(4)(c)"],
+        "threshold": "1 month from initial incident notification",
+        "summary": "Final report: detailed description, incident type, root cause, mitigation measures, cross-border impact. No equivalent final-report requirement exists in GDPR or HIPAA — those frameworks do not mandate post-incident reporting back to authorities",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT-GDPR-SA",
+    "title": "GDPR — Personal data breach: supervisory authority notification",
+    "domain": "Incident Response",
+    "description": "Notify the supervisory authority of a personal data breach without undue delay and, where feasible, not later than 72 hours of becoming aware.",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.33"],
+        "threshold": "72 hours from awareness (where feasible) — same window as NIS2 full notification, but to a different authority (DPA vs CSIRT)",
+        "summary": "Notify with: nature of breach, categories/approximate number of individuals affected, DPO contact, likely consequences, measures taken. If not feasible within 72h, notify as soon as possible with reasons for delay. Key nuance: applies only to personal data breaches — a non-personal-data breach triggering NIS2 notification may not trigger GDPR Art.33",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT-GDPR-DS",
+    "title": "GDPR — Personal data breach: data subject communication",
+    "domain": "Incident Response",
+    "description": "When a breach is likely to result in a high risk to individuals' rights and freedoms, communicate directly to the affected data subjects without undue delay.",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.34"],
+        "threshold": "Without undue delay — only when breach is likely to result in HIGH RISK to individuals",
+        "summary": "Risk-gated: if risk is high, notify individuals. If not high risk, no individual notification required. Key nuance vs HIPAA: GDPR uses a risk threshold; HIPAA requires individual notification for all unsecured PHI breaches regardless of actual risk to the individual",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT-HIPAA-IND",
+    "title": "HIPAA — Individual breach notification within 60 days",
+    "domain": "Incident Response",
+    "description": "Notify affected individuals of a breach of unsecured PHI without unreasonable delay and within 60 calendar days of discovering the breach.",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.404"],
+        "threshold": "60 calendar days from discovery — 20× slower than GDPR's 72h, but no risk-level threshold: ALL unsecured PHI breaches require individual notification",
+        "summary": "Written notification to each affected individual: description of breach, types of PHI involved, steps individuals should take, what covered entity is doing, and a contact. Key nuance: 'unsecured PHI' means unencrypted — properly encrypted data is not a 'breach' under HIPAA (encryption safe harbour §164.402(2)(iv)). This safe harbour has no equivalent in GDPR or NIS2",
+        "citation": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html"
+      }
+    }
+  },
+  {
+    "id": "INC-RPT-HIPAA-HHS",
+    "title": "HIPAA — HHS Secretary notification",
+    "domain": "Incident Response",
+    "description": "Notify the HHS Secretary of breaches of unsecured PHI. Timing depends on size: ≥500 individuals within 60 days; <500 individuals via annual log submitted within 60 days after year-end.",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.408"],
+        "threshold": "≥500 individuals: 60 days from discovery. <500 individuals: annual log by March 1 of the following year",
+        "summary": "Two-tier system: large breaches notified promptly (triggers public media notification too if ≥500 in a single state); small breaches logged annually. No equivalent tiered/annual reporting in GDPR or NIS2 — both require per-incident reporting regardless of scale",
+        "citation": "https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html"
+      }
+    }
+  },
+  {
+    "id": "INC-LEARN",
+    "title": "Post-Incident Review and Lessons Learned",
+    "domain": "Incident Response",
+    "description": "After each significant incident, conduct a post-incident review to identify root causes, evaluate response effectiveness, and update controls accordingly.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.27"],
+        "summary": "Learn from information security incidents to improve controls and procedures — ISO explicitly requires this as a standalone control",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC7.4"],
+        "summary": "Contain incidents; document impact; analyze root causes to mitigate future incidents",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(b)"],
+        "summary": "Incident handling procedures must include lessons learned and continuous improvement",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(6)(ii)", "§164.308(a)(1)(ii)(B)"],
+        "summary": "Documenting incident outcomes (§164.308(a)(6)(ii)) feeds into risk management (§164.308(a)(1)(ii)(B)) — HIPAA links post-incident findings to updating the risk management programme. The §164.308(a)(8) Evaluation standard covers periodic programmatic evaluation, not per-incident review",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Art.32(1)(d) explicitly requires 'a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures' — post-incident review is primary evidence of this process",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-CONTINUITY",
+    "title": "Business Continuity and Disaster Recovery",
+    "domain": "Incident Response",
+    "description": "Maintain business continuity plans, backup procedures, and disaster recovery capabilities to restore operations following a disruptive incident.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.29", "A.5.30"],
+        "summary": "Information security during disruption; ICT readiness for business continuity — requires testing of continuity measures",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["A1.1", "A1.2", "A1.3"],
+        "threshold": "Only tested when Availability is in audit scope — many SOC2 Type II engagements cover Security category only",
+        "summary": "Monitor processing capacity; evaluate availability risks; maintain and test recovery plans. SOC2 Type II auditors require evidence of actual DR exercises (test reports), not just documented plans",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(c)"],
+        "summary": "Business continuity including backup management, disaster recovery, and crisis management — NIS2 Implementing Regulation 2024/2690 requires backup restoration to be tested",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(7)(i)", "§164.308(a)(7)(ii)(A)", "§164.308(a)(7)(ii)(B)", "§164.308(a)(7)(ii)(C)"],
+        "summary": "Contingency plan: data backup (required), disaster recovery (required), emergency mode operations (required). Unique to HIPAA: the Emergency Access Procedure (§164.312(a)(2)(ii)) — must maintain the ability to access ePHI even during a disaster/disruption. No equivalent 'must maintain access during failure' obligation in GDPR or NIS2",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Art.32(1)(b) explicitly requires 'the ability to ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services' and restoration ability after incidents",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "INC-CONTINUITY-TEST",
+    "title": "HIPAA — Contingency plan testing and criticality analysis",
+    "domain": "Incident Response",
+    "description": "Periodically test and revise contingency plans, and assess the criticality of specific applications and data to prioritise recovery sequencing.",
+    "parentId": "INC-CONTINUITY",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.308(a)(7)(ii)(D)", "§164.308(a)(7)(ii)(E)"],
+        "threshold": "Addressable — must implement or document a reasoned alternative",
+        "summary": "§164.308(a)(7)(ii)(D): test and revise contingency plans periodically. §164.308(a)(7)(ii)(E): applications and data criticality analysis — rank applications by their importance to recovery priorities. These are separately addressable specs; evidence artefacts (test reports, criticality matrices) differ from the plan documents themselves",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "ISO27001": {
+        "refs": ["A.5.30"],
+        "summary": "ICT readiness for business continuity explicitly requires testing of continuity measures",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["A1.3"],
+        "threshold": "Only when Availability is in scope",
+        "summary": "Recovery plan for availability — SOC2 auditors specifically request evidence of disaster recovery exercise results, not just documented procedures",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      }
+    }
+  },
+  {
+    "id": "AC-POLICY",
+    "title": "Access Control Policy",
+    "domain": "Access Control",
+    "description": "Define, document, and enforce an access control policy based on business and security requirements, applying least privilege and need-to-know principles.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.15", "A.5.18"],
+        "summary": "Access control policy; manage access rights — granting, modification, revocation",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC5.3", "CC6.1", "CC6.2", "CC6.3"],
+        "summary": "CC5.3: controls deployed through policies and procedures; CC6.1–CC6.3: logical access controls, user provisioning, access removal",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(i)"],
+        "summary": "Access control policies as part of human resources security and asset management measures",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(4)(i)", "§164.308(a)(4)(ii)(B)", "§164.312(a)(1)"],
+        "summary": "Information access management — authorise access to ePHI based on role. Note: HIPAA's Minimum Necessary standard (§164.514(d)) imposes an additional use/disclosure restriction beyond the access policy — see child control AC-POLICY-MINNEC",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.25", "Art.32"],
+        "summary": "Data protection by design and by default; appropriate access controls as security measure. Note: GDPR data minimisation (Art.5(1)(c)) operates at collection time — see child control AC-POLICY-DATAMIN",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "AC-POLICY-MINNEC",
+    "title": "HIPAA — Minimum Necessary Standard",
+    "domain": "Access Control",
+    "description": "Make reasonable efforts to limit the use, disclosure, and request for PHI to the minimum amount necessary to accomplish the intended purpose of the use, disclosure, or request.",
+    "parentId": "AC-POLICY",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.514(d)"],
+        "summary": "Applies at point of USE and DISCLOSURE — each workforce member who uses PHI needs role-based policies limiting what they can see. Key nuance vs GDPR data minimisation: HIPAA minimum necessary governs what staff can ACCESS and SHARE from data already held; GDPR data minimisation governs what data you COLLECT in the first place. A hospital legitimately collects a full patient record (GDPR allows); HIPAA then restricts which staff can view which parts",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      }
+    }
+  },
+  {
+    "id": "AC-POLICY-DATAMIN",
+    "title": "GDPR — Data Minimisation",
+    "domain": "Access Control",
+    "description": "Ensure personal data collected is adequate, relevant, and limited to what is necessary in relation to the purposes for which it is processed.",
+    "parentId": "AC-POLICY",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.5(1)(c)", "Art.25"],
+        "summary": "Applies at COLLECTION TIME — a data-protection-by-design obligation requiring that only necessary data is collected at the point of system design. Key nuance vs HIPAA minimum necessary: GDPR governs what you COLLECT; HIPAA minimum necessary governs what you USE/DISCLOSE from data already collected. GDPR Art.25 makes data minimisation a technical design requirement, not just a policy",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "ISO27001": {
+        "refs": ["A.5.12"],
+        "summary": "Information classification and labelling — complementary: classifying data helps identify what is necessary and what should not be collected or retained",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["P3.1"],
+        "threshold": "Only when Privacy is in audit scope",
+        "summary": "Personal information collected only to extent necessary to accomplish specified purpose — closest SOC2 analogue to GDPR data minimisation",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      }
+    }
+  },
+  {
+    "id": "AC-IDM",
+    "title": "Identity Management and Provisioning",
+    "domain": "Access Control",
+    "description": "Manage digital identities throughout their lifecycle — creation, modification, and timely deprovisioning — to ensure only authorised users access systems.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.16", "A.5.17"],
+        "summary": "Identity management; authentication information management",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC6.2", "CC6.3"],
+        "summary": "Provision new users with appropriate access; remove access when no longer required",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(i)"],
+        "summary": "Human resources security and access control policies — covers identity lifecycle: onboarding, role changes, and offboarding",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(a)(2)(i)", "§164.308(a)(3)(ii)(C)"],
+        "summary": "Unique user identification (required); termination procedures for access removal (addressable). HIPAA requires each user to have a UNIQUE identifier — shared accounts are a violation, unlike in some other frameworks where this is just best practice",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.25", "Art.32"],
+        "summary": "Data minimisation and access limitation as privacy by design — limit who can access personal data as a technical measure",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "AC-PRIV",
+    "title": "Privileged Access Management",
+    "domain": "Access Control",
+    "description": "Restrict, monitor, and control the use of privileged accounts; apply just-in-time access, separate admin accounts, and audit privileged activity.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.2", "A.8.18"],
+        "summary": "A.8.2: privileged access rights — restrict, control, and audit; A.8.18: use of privileged utility programs — specific controls on tools that can bypass normal access controls",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC6.1", "CC6.3"],
+        "summary": "Logical access controls restrict privileged access; remove when no longer needed. Auditors specifically look for separation of duties between admin and non-admin accounts",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(i)"],
+        "summary": "Access control policies covering privileged users — NIS2 Implementing Regulation 2024/2690 explicitly calls out privileged access as a required access-control measure",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(a)(1)"],
+        "summary": "Access to ePHI limited to authorised persons — elevated scrutiny for privileged roles; no HIPAA-specific PAM requirement but OCR enforcement consistently targets uncontrolled admin access",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.25", "Art.32"],
+        "summary": "Privileged access controls as part of security measures and data protection by design",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "AC-AUTH",
+    "title": "Authentication Controls",
+    "domain": "Access Control",
+    "description": "Implement strong authentication mechanisms to verify the identity of users and systems before granting access to sensitive resources.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.5"],
+        "summary": "Secure authentication — controls to manage authentication information including passwords, certificates, and strong authentication methods",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC6.1", "CC6.6"],
+        "summary": "Logical access controls; CC6.6: protection of system boundaries against unauthorised external access. Points of Focus for CC6.1 explicitly cite MFA — see child control AC-AUTH-MFA",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(j)"],
+        "summary": "Explicitly mandates MFA or continuous authentication — the only framework that requires MFA by name in the legislation itself. SOC2 references it in Points of Focus; HIPAA defers to OCR guidance",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(d)"],
+        "summary": "Person or entity authentication — verify identity before granting ePHI access. HIPAA does not prescribe a specific method; OCR guidance and NIST 800-66r2 endorse MFA but it is not mandated by the rule text",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Authentication as a technical measure to ensure appropriate security — no specific method mandated; proportionality to risk determines what is 'appropriate'",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "AC-AUTH-MFA",
+    "title": "Multi-Factor Authentication (MFA)",
+    "domain": "Access Control",
+    "description": "Require MFA for access to critical systems, remote access, and privileged accounts, combining at least two independent authentication factors.",
+    "parentId": "AC-AUTH",
+    "frameworks": {
+      "NIS2": {
+        "refs": ["Art.21(2)(j)"],
+        "threshold": "Required for in-scope entities — no opt-out; MFA or continuous authentication is explicitly mandated in the directive text",
+        "summary": "The only framework where MFA is required by name in the legislation. Entities must use MFA or continuous authentication solutions for network and information system access",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "ISO27001": {
+        "refs": ["A.8.5"],
+        "summary": "MFA is a form of secure authentication — required where risk warrants; risk assessment determines scope",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC6.1", "CC6.6"],
+        "summary": "CC6.1 Points of Focus (2022) explicitly cite 'considers multi-factor authentication' — in practice auditors collect MFA evidence (Okta, Duo, Entra ID policy screenshots) here. CC6.6 covers remote-access MFA. SOC2 does not mandate MFA but evidence of it significantly reduces audit risk",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(d)"],
+        "summary": "OCR guidance and NIST 800-66r2 endorse MFA as the strongest way to satisfy person/entity authentication — not mandated by rule text but near-expected in current enforcement climate",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      }
+    }
+  },
+  {
+    "id": "AC-AUTH-PASSWD",
+    "title": "Password and Credential Management",
+    "domain": "Access Control",
+    "description": "Define and enforce password policies covering complexity, rotation, safeguarding, and workforce training on credential hygiene.",
+    "parentId": "AC-AUTH",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.308(a)(5)(ii)(D)"],
+        "threshold": "Addressable — separately addressable from the overall training programme standard",
+        "summary": "HIPAA §164.308(a)(5)(ii)(D): procedures for creating, changing, and safeguarding passwords — this is a TRAINING obligation (under the Security Awareness standard), not a technical control. It must be satisfied separately from the authentication technical control at §164.312(d)",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "ISO27001": {
+        "refs": ["A.5.17"],
+        "summary": "Authentication information management — policies for password quality, storage, and rotation",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(i)"],
+        "summary": "NIS2 Implementing Regulation 2024/2690 Art.5 specifies strong password policies as part of access control measures — minimum length, complexity, and prohibition of known-compromised passwords",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "SOC2": {
+        "refs": ["CC6.1"],
+        "summary": "CC6.1 Points of Focus include password complexity and rotation requirements as part of logical access security",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      }
+    }
+  },
+  {
+    "id": "AC-REVIEW",
+    "title": "Access Rights Review",
+    "domain": "Access Control",
+    "description": "Periodically review user access rights, remove unnecessary access, and re-certify accounts to prevent privilege accumulation.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.18"],
+        "summary": "Access rights managed and reviewed at regular intervals — no prescribed frequency; risk-based",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC6.3"],
+        "summary": "Remove access to system assets when no longer required — SOC2 auditors review offboarding evidence and periodic access certifications",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(i)"],
+        "summary": "Asset management and access control policies include regular access reviews",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(4)(ii)(C)"],
+        "threshold": "Addressable",
+        "summary": "Access establishment and modification — review and modify access based on authorisation policy. Addressable: must implement or document why not and what alternative is used",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.25", "Art.32"],
+        "summary": "Access minimisation; ongoing review to ensure only necessary access is retained — supports data minimisation and storage limitation principles",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "AC-LOG",
+    "title": "Audit Logging and Monitoring",
+    "domain": "Access Control",
+    "description": "Generate, protect, and retain audit logs of access to systems and data; review logs and alert on anomalies. Note: log generation and log review are distinct obligations — see child controls.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.15", "A.8.16"],
+        "summary": "A.8.15: logging — event logs including user activities, exceptions, and security events; A.8.16: monitoring activities — analysis of logs for anomalous behaviour. ISO separates generation from review",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC7.2"],
+        "summary": "CC7.2: detect anomalies and security incidents through ongoing monitoring. Note: CC7.1 (vulnerability detection tooling) is NOT an audit log criterion — it belongs to vulnerability management",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(b)", "§164.308(a)(1)(ii)(D)"],
+        "summary": "§164.312(b) Audit Controls (required): hardware/software/procedural mechanisms to RECORD and examine ePHI system activity. §164.308(a)(1)(ii)(D) Information System Activity Review (required): process to REVIEW audit logs, access reports, and incident tracking. HIPAA explicitly separates log generation from log review — both are required specs",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(a)"],
+        "summary": "Risk management includes monitoring as a detection measure — NIS2 Implementing Regulation 2024/2690 Art.10 specifies logging requirements for essential/important entities",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "GDPR": {
+        "refs": ["Art.5(2)", "Art.32"],
+        "summary": "Art.5(2) accountability principle: controller must be able to DEMONSTRATE compliance — this creates an implicit logging obligation beyond just security logging. Art.32 covers security logs; Art.5(2) additionally requires records demonstrating lawful processing, consent, and fulfilment of data-subject rights",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "AC-ENCRYPT",
+    "title": "Encryption",
+    "domain": "Access Control",
+    "description": "Encrypt sensitive data using current cryptographic standards. Frameworks differ on whether at-rest and in-transit encryption are required or addressable — see child controls for per-framework treatment.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.24"],
+        "summary": "Use of cryptography — policy required; implementation risk-based. ISO does not distinguish between at-rest and in-transit encryption; both are addressed under one control",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(h)"],
+        "summary": "Policies and procedures for use of cryptography and encryption — NIS2 Implementing Regulation 2024/2690 Art.9 specifies documented key management and algorithm selection requirements",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(a)(2)(iv)", "§164.312(e)(2)(ii)"],
+        "summary": "Both at-rest (§164.312(a)(2)(iv)) and in-transit (§164.312(e)(2)(ii)) are addressable — but critically, properly encrypted data is exempt from breach notification (safe harbour §164.402(2)(iv)). This encryption safe harbour has NO equivalent in GDPR or NIS2: those frameworks require breach reporting regardless of whether data was encrypted",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Encryption explicitly listed in Art.32(1)(a) as an appropriate technical measure — but risk-based; no mandatory encryption requirement. Unlike HIPAA, encrypted data is still a 'personal data breach' under GDPR if accessed without authorisation — no encryption safe harbour",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "SOC2": {
+        "refs": ["CC6.7", "C1.1"],
+        "threshold": "C1.1 applies only when Confidentiality trust services category is in audit scope",
+        "summary": "CC6.7: encryption in transit (always in scope for Security category); C1.1: encryption at rest for confidential information (only when Confidentiality is in scope)",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      }
+    }
+  },
+  {
+    "id": "AC-ENCRYPT-TRANSIT",
+    "title": "Encryption in Transit",
+    "domain": "Access Control",
+    "description": "Encrypt all sensitive data in transit over networks using current TLS standards or equivalent. Document protocols, certificate management, and prohibited ciphers.",
+    "parentId": "AC-ENCRYPT",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.312(e)(2)(ii)"],
+        "threshold": "Addressable — but OCR enforcement posture and 2024 HIPAA Security Rule NPRM treat this as near-mandatory; proposed rule would make it required",
+        "summary": "Transmission security encryption: encrypt ePHI whenever deemed appropriate. In practice, OCR expects TLS for all ePHI over public networks. Key nuance: if implemented, creates a partial breach safe harbour (§164.402(2)(iv)) for ePHI intercepted in transit",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "ISO27001": {
+        "refs": ["A.8.24"],
+        "summary": "Cryptography policy covers transmission encryption — implementation based on risk assessment",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(h)"],
+        "summary": "Cryptography policy must address transmission encryption — NIS2 Implementing Regulation specifies TLS 1.2+ as minimum for essential entities",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "SOC2": {
+        "refs": ["CC6.7"],
+        "summary": "CC6.7: restrict access to confidential information during transmission — evidence typically: TLS configs, certificate inventories, network traffic inspection results",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Appropriate technical measure — encrypted transmission expected for personal data. Unlike HIPAA, GDPR has no encryption safe harbour: intercepted personal data is still a reportable breach",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "AC-ENCRYPT-REST",
+    "title": "Encryption at Rest",
+    "domain": "Access Control",
+    "description": "Encrypt sensitive data stored on disks, databases, backups, and portable media using documented key management procedures.",
+    "parentId": "AC-ENCRYPT",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.312(a)(2)(iv)"],
+        "threshold": "Addressable — entity must implement or document a reasoned alternative with equivalent protection",
+        "summary": "Encrypt and decrypt ePHI at rest: mechanism to encrypt stored ePHI. Critical strategic nuance: properly encrypted data with managed keys is NOT a reportable breach under HIPAA's breach notification safe harbour (§164.402(2)(iv)). This is the strongest incentive for encryption in the HIPAA framework — no equivalent safe harbour in GDPR or NIS2",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "ISO27001": {
+        "refs": ["A.8.24"],
+        "summary": "Cryptography policy covers data at rest — risk-based determination of what requires encryption",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(h)"],
+        "summary": "Cryptography and encryption policy — at-rest encryption required where risk warrants",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "SOC2": {
+        "refs": ["C1.1"],
+        "threshold": "Only when Confidentiality trust services category is in audit scope",
+        "summary": "Confidential information protected against unauthorised access — at-rest encryption is a primary evidence artefact",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Pseudonymisation and encryption explicitly listed in Art.32(1)(a) as appropriate measures — risk-based assessment required. Encrypted stored personal data that is leaked is still a personal data breach requiring Art.33 notification; no safe harbour equivalent to HIPAA",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "KEY-MGMT",
+    "title": "Cryptographic Key Management",
+    "domain": "Access Control",
+    "description": "Manage the full lifecycle of cryptographic keys — generation, distribution, storage, rotation, revocation, and destruction — using documented procedures and appropriate key protection mechanisms (e.g. HSM).",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.24"],
+        "summary": "Use of cryptography explicitly covers key lifecycle: generation, storage, distribution, retirement, and destruction. ISO 27001:2022 expanded A.8.24 to include key management as a distinct obligation within the cryptography control",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(h)"],
+        "summary": "NIS2 Implementing Regulation 2024/2690 Art.9 specifies key management requirements: documented procedures for key generation, storage (HSM encouraged), rotation schedules, and secure destruction",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(a)(2)(iv)"],
+        "summary": "Critical nuance: unmanaged encryption keys (e.g. keys stored alongside encrypted data or not rotated) defeat the breach notification safe harbour (§164.402(2)(iv)). OCR has found that encryption without proper key management does not qualify for the safe harbour — key management is effectively required to benefit from encryption",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "SOC2": {
+        "refs": ["CC6.7"],
+        "summary": "Auditors review key management procedures as part of CC6.7 testing — HSM usage, key rotation policies, key custodian separation of duties are common evidence requests",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Proper key management is a prerequisite for encryption to be an 'appropriate technical measure' under Art.32 — encryption with exposed keys does not adequately protect personal data",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "RISK-MGMT",
+    "title": "Risk Management Process",
+    "domain": "Risk Management",
+    "description": "Establish and maintain a risk management process to identify, analyse, evaluate, and treat information security risks on a recurring basis.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.1"],
+        "summary": "Note: the substantive ISO 27001 risk management obligation is in normative clauses 6.1.2 (risk assessment), 8.2 (risk assessment process), and 8.3 (risk treatment) — not in Annex A. A.5.1 (information security policies) sets the policy framework that governs risk management. Annex A alone does not satisfy the risk management requirement",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC3.1", "CC3.2", "CC3.3", "CC3.4", "CC4.1", "CC4.2"],
+        "summary": "CC3.1–CC3.4: specify objectives; identify/analyse risks; assess fraud risk; identify change-related risks. CC4.1–CC4.2: ongoing evaluation of control effectiveness; communicate deficiencies. SOC2 risk assessment is COSO-based, tied to financial reporting objectives — differs from the information-security-centric HIPAA and ISO approaches",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(a)", "Art.21(1)"],
+        "summary": "All-hazards, proportionate approach — risk management must consider all threats to network and information systems, not just cyber threats. Proportionality to entity size and societal impact is explicitly required",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(1)(ii)(A)", "§164.308(a)(1)(ii)(B)"],
+        "summary": "Risk analysis (required): comprehensive assessment of threats and vulnerabilities to ePHI confidentiality, integrity, and availability. Risk management (required): implement measures to reduce risks to a reasonable and appropriate level. Unique: HIPAA risk analysis must specifically enumerate ePHI locations — a spatial asset-scoping obligation not explicit in ISO or NIS2",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.25", "Art.32", "Art.35"],
+        "summary": "Risk-based security measures (Art.32); DPIA for high-risk processing (Art.35); privacy by design as a risk-preventive measure (Art.25). GDPR risk assessment focuses on risks to INDIVIDUALS' rights and freedoms — a different lens from ISO/HIPAA which focus on organisational/asset risk",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "VULN-MGMT",
+    "title": "Vulnerability and Patch Management",
+    "domain": "Risk Management",
+    "description": "Operate a vulnerability management programme covering discovery (scanning), assessment, prioritisation, remediation, and tracking of technical vulnerabilities across information systems.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.8"],
+        "summary": "Management of technical vulnerabilities: obtain timely information about vulnerabilities, evaluate exposure, take appropriate measures. ISO sets no specific patch timelines — 'timely' is risk-based",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(e)"],
+        "threshold": "NIS2 Implementing Regulation 2024/2690 specifies patch timelines by severity: critical vulnerabilities — remediate within 24h of exploit availability; high — within 1 week; medium — within 1 month",
+        "summary": "Security in network and information system maintenance includes vulnerability handling. Key nuance: the NIS2 Implementing Regulation (EU 2024/2690 Art.13) imposes the only explicit, severity-tiered patch deadlines of any framework in this list — HIPAA, ISO, and SOC2 all require 'timely' remediation without numeric timelines",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "SOC2": {
+        "refs": ["CC7.1"],
+        "summary": "CC7.1: detect changes in configurations and newly discovered vulnerabilities using detection and monitoring procedures. Note: this is a vulnerability DETECTION criterion (scanning tools, configuration monitoring) — not an audit-log criterion. Evidence: vulnerability scan reports, patch management records, CVE tracking",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(1)(ii)(B)"],
+        "summary": "Risk management — implement security measures to reduce risks to a reasonable level. NIST 800-66r2 (HHS's own guidance) explicitly includes vulnerability scanning and patch management as required risk management activities. No explicit patch timelines in HIPAA rule text",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Art.32(1)(b) requires 'ongoing confidentiality, integrity, availability and resilience' — unpatched known vulnerabilities are treated by DPAs as a failure of Art.32 technical measures. EDPB guidance has cited unpatched systems as a finding in breach investigations",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "CHG-MGMT",
+    "title": "Change Management",
+    "domain": "Risk Management",
+    "description": "Control changes to information systems, infrastructure, applications, and data through a formal process covering authorisation, impact assessment, testing, documentation, and rollback capability.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.32"],
+        "summary": "Change management — changes to information processing facilities controlled. ISO requires documented procedures but does not prescribe a specific workflow or ticket system",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC8.1"],
+        "summary": "The entity authorises, designs, develops or acquires, configures, documents, tests, approves, and implements changes. CC8.1 is one of the most evidence-intensive criteria in SOC2 Type II audits — auditors collect: change tickets with approval signatures, test results, deployment logs, separation of duties evidence (dev ≠ approver ≠ deployer). Significantly more prescriptive than ISO A.8.32 or NIS2",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(e)"],
+        "summary": "Security in acquisition, development and maintenance — change management is part of secure development and operational practices. Less prescriptive than SOC2 CC8.1",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(8)"],
+        "summary": "Evaluation: periodic technical and non-technical evaluation of whether security policies/procedures meet the rule's requirements — change management procedures are reviewed as part of this. HIPAA does not have a standalone change management standard; NIST 800-66r2 maps change control to risk management",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Changes to systems processing personal data must maintain required security measures — an uncontrolled change that removes encryption or breaks access controls is an Art.32 violation. GDPR requires ongoing security, implying controlled change processes",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "ASSET-MGMT",
+    "title": "Information Asset Inventory and Classification",
+    "domain": "Risk Management",
+    "description": "Maintain a current inventory of information assets and the systems that process them, classify by sensitivity and criticality, and apply handling requirements accordingly.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.9", "A.5.12"],
+        "summary": "A.5.9: inventory of information and associated assets — maintain and keep current. A.5.12: information classification — classify according to legal requirements, value, criticality, and sensitivity",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(i)"],
+        "summary": "Asset management is explicitly listed in Art.21(2)(i) as a minimum security measure for essential/important entities — covering identification, classification, and protection of assets",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "SOC2": {
+        "refs": ["CC6.1"],
+        "summary": "Logical access security requires understanding what assets exist and what data they contain — asset inventory is a prerequisite for CC6.1 control design",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "HIPAA": {
+        "refs": ["§164.310(d)(1)", "§164.308(a)(1)(ii)(A)"],
+        "summary": "§164.310(d)(1) Device and Media Controls: maintain a record of hardware and electronic media and movement. Risk analysis (§164.308(a)(1)(ii)(A)) requires identifying all locations where ePHI is stored, transmitted, or received — a mandatory asset-scoping step unique to HIPAA. No other framework makes asset enumeration a formal prerequisite for risk assessment",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.30", "Art.32"],
+        "summary": "Art.30 RoPA is effectively a data-asset inventory for personal data. Art.32 security measures must be applied to all assets processing personal data — requires knowing what those assets are",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "NETWORK-SEG",
+    "title": "Network Security and Segmentation",
+    "domain": "Access Control",
+    "description": "Implement network security controls including segmentation, boundary protection, and monitoring to prevent unauthorised lateral movement and protect sensitive systems.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.20", "A.8.21", "A.8.22"],
+        "summary": "A.8.20: networks security controls; A.8.21: security of network services; A.8.22: segregation of networks — separate sensitive systems from general user networks",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(h)"],
+        "summary": "NIS2 Implementing Regulation 2024/2690 Art.8 explicitly requires network segmentation as a security measure for essential/important entities — one of the few controls made explicit in the Implementing Regulation",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "SOC2": {
+        "refs": ["CC6.6"],
+        "summary": "CC6.6: boundaries of the system protect against threats and vulnerabilities from external sources — network segmentation and firewall configuration are primary evidence artefacts",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "HIPAA": {
+        "refs": ["§164.312(e)(1)"],
+        "summary": "Transmission Security: guard against unauthorised access to ePHI transmitted over communications networks — network segmentation limits blast radius of a breach and is a recognised technical safeguard",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Network security as a technical measure to ensure confidentiality, integrity, and availability — segmentation reduces the scope of a breach and is relevant to proportionality of security measures",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "DATA-RETAIN",
+    "title": "Data Retention and Secure Deletion",
+    "domain": "Data Governance",
+    "description": "Define, document, and enforce data retention periods aligned with legal requirements and business purpose; securely delete or anonymise data when the retention period expires.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.8.10"],
+        "summary": "Information deletion: information stored in information systems deleted when no longer required. ISO 27001:2022 added A.8.10 as a new Annex A control (not in 2013 edition) — reflects growing regulatory pressure",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "GDPR": {
+        "refs": ["Art.5(1)(e)", "Art.17"],
+        "summary": "Art.5(1)(e) storage limitation principle: personal data kept no longer than necessary for stated purposes — one of six core GDPR principles. Art.17: right to erasure — active deletion obligation when purpose lapses or consent withdrawn. Storage limitation violation is one of the most frequently cited DPA enforcement findings. Key nuance: GDPR requires per-PURPOSE retention schedules, not just a single retention period",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.316(b)(2)(i)"],
+        "summary": "Documentation retention: security policies, procedures, and records must be retained for 6 years from creation or last effective date — a specific mandatory period not found in ISO or NIS2. Note: PHI retention periods are governed by state law (typically 6–10 years for adults), not HIPAA itself",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "SOC2": {
+        "refs": ["P4.2", "P4.3"],
+        "threshold": "Only when Privacy is in audit scope",
+        "summary": "P4.2: personal information retained no longer than necessary; P4.3: obsolete personal information destroyed or anonymised",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(a)"],
+        "summary": "Risk-based policies must account for information asset lifecycle including disposal — no specific retention periods mandated",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      }
+    }
+  },
+  {
+    "id": "TRAIN",
+    "title": "Security Awareness and Training",
+    "domain": "People Security",
+    "description": "Deliver role-appropriate security awareness education and training to all staff, including phishing simulations, secure coding practices, and annual refreshers. HIPAA has four separately addressable sub-requirements — see child controls.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.6.3"],
+        "summary": "Information security awareness, education and training for all relevant personnel — covers all roles, risk-based depth",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC1.4", "CC2.2"],
+        "summary": "CC1.4: competence policies — training to ensure staff perform their control responsibilities. CC2.2: internal communication of control information and responsibilities. SOC2 does not prescribe training content or frequency; evidence is typically training completion records and competence assessments",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(g)"],
+        "summary": "Basic cyber hygiene practices and cybersecurity training for all staff with system access, including management — NIS2 Implementing Regulation 2024/2690 requires training to cover phishing, password hygiene, and social engineering at minimum. Explicitly includes management board members",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(a)(5)(i)"],
+        "summary": "Security awareness and training programme (required): the overall programme standard. Four separately addressable implementation specifications exist within this standard — see child controls for each. Key nuance: the HIPAA training standard is the only one with legally distinct sub-specifications, each of which must be individually implemented or have a documented alternative",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.32"],
+        "summary": "Staff training as an organisational measure for appropriate security — EDPB guidance identifies staff training as a key element of Art.32 compliance; no content or frequency specified",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "TRAIN-HIPAA-REMINDERS",
+    "title": "HIPAA — Periodic security reminders",
+    "domain": "People Security",
+    "description": "Provide periodic security updates and reminders to all workforce members to reinforce security awareness.",
+    "parentId": "TRAIN",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.308(a)(5)(ii)(A)"],
+        "threshold": "Addressable — must implement or document a reasoned alternative",
+        "summary": "Periodic security updates to the workforce: separate from the annual training programme, this requires ongoing reminders (e.g. monthly security bulletins, phishing alerts, policy change notices). Independently addressable from §164.308(a)(5)(ii)(B)–(D)",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      }
+    }
+  },
+  {
+    "id": "TRAIN-HIPAA-MALWARE",
+    "title": "HIPAA — Malicious software protection training",
+    "domain": "People Security",
+    "description": "Train workforce members on procedures for guarding against, detecting, and reporting malicious software.",
+    "parentId": "TRAIN",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.308(a)(5)(ii)(B)"],
+        "threshold": "Addressable",
+        "summary": "Workforce procedures for guarding against malicious software — this is a TRAINING obligation (not the technical anti-malware control). Workforce must know how to recognise malware indicators and how to report suspected infections. Separately addressable from other HIPAA training specs",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      }
+    }
+  },
+  {
+    "id": "TRAIN-HIPAA-LOGIN",
+    "title": "HIPAA — Log-in monitoring awareness training",
+    "domain": "People Security",
+    "description": "Train workforce to recognise and report anomalous log-in attempts and discrepancies in access patterns.",
+    "parentId": "TRAIN",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.308(a)(5)(ii)(C)"],
+        "threshold": "Addressable",
+        "summary": "Workforce procedures for monitoring log-in attempts and reporting discrepancies — distinct from the technical log monitoring control (§164.312(b)). This requires the WORKFORCE to be trained to spot and report suspicious log-in activity, not just rely on automated systems. No direct equivalent in ISO, NIS2, or GDPR training requirements",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      }
+    }
+  },
+  {
+    "id": "VENDOR",
+    "title": "Supplier and Third-Party Security",
+    "domain": "Supply Chain",
+    "description": "Assess security practices of suppliers and third-party service providers, include security requirements in contracts, and monitor ongoing compliance. Frameworks differ significantly on sub-processor chain obligations.",
+    "frameworks": {
+      "ISO27001": {
+        "refs": ["A.5.19", "A.5.20", "A.5.21", "A.5.22", "A.5.23"],
+        "summary": "Supplier relationships, contracts, ICT supply chain monitoring; A.5.23 specifically covers cloud service providers as a new control in ISO 27001:2022",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC9.2"],
+        "summary": "Assess and manage business partners and vendors for risk — SOC2 auditors review vendor risk assessment processes and contractual security requirements. Less prescriptive than GDPR or NIS2 on sub-contractor chains",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "NIS2": {
+        "refs": ["Art.21(2)(d)", "Art.21(2)(e)"],
+        "summary": "Supply chain security covers direct suppliers AND their sub-contractors — chain visibility is required. Art.21(2)(d): relationships between entity and direct suppliers/service providers. Art.21(2)(e): security requirements must flow down through the supply chain for system acquisition and maintenance. NIS2 Implementing Regulation requires assessing third parties' own security practices and resilience",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+      },
+      "HIPAA": {
+        "refs": ["§164.308(b)(1)"],
+        "summary": "Business associate agreements (BAAs) required before disclosing PHI to any third party that creates, receives, maintains, or transmits ePHI on the covered entity's behalf. HIPAA flows down to BAs but not automatically to sub-contractors — covered entities must contractually require BAs to obtain BAAs from their own sub-contractors. Unique: HIPAA BAs are directly liable under HIPAA if they breach the rules",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      },
+      "GDPR": {
+        "refs": ["Art.28"],
+        "summary": "Art.28(2): processors may not engage sub-processors without prior WRITTEN controller authorisation — general or specific. Art.28(4): sub-processors must be bound by the same data-protection obligations as the processor — full flow-down required. Key nuance vs HIPAA: GDPR requires controller's active prior written approval for each sub-processor; HIPAA merely requires the BA to flow down obligations contractually without notifying the covered entity",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "GDPR-ROPA",
+    "title": "Records of Processing Activities (RoPA)",
+    "domain": "Data Governance",
+    "description": "Maintain an up-to-date record of all personal data processing activities, including purposes, data categories, recipients, retention periods, and security measures.",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.30"],
+        "summary": "Controllers and processors must maintain records of processing activities — mandatory for organisations with ≥250 employees, or smaller organisations where processing is not occasional, involves special categories of data, or could result in risk to individuals. RoPA is the primary accountability document and the first thing DPAs request during an investigation",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "ISO27001": {
+        "refs": ["A.5.9", "A.5.33"],
+        "summary": "Asset inventory (A.5.9) and protection of records (A.5.33) — the RoPA is an information asset and a compliance record, both of which require protection under ISO 27001",
+        "citation": "https://www.iso.org/standard/27001"
+      }
+    }
+  },
+  {
+    "id": "GDPR-DPIA",
+    "title": "Data Protection Impact Assessment (DPIA)",
+    "domain": "Data Governance",
+    "description": "Conduct a DPIA before processing that is likely to result in a high risk to individuals' rights and freedoms, and consult the supervisory authority where residual risk remains high.",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.35"],
+        "summary": "DPIA required for high-risk processing: new technologies, large-scale processing of special categories, systematic monitoring. Must include: systematic description of processing, assessment of necessity, assessment of risks, measures to address risks. EDPB guidelines list nine types of processing that always require a DPIA",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "ISO27001": {
+        "refs": ["A.5.1"],
+        "summary": "Privacy risk assessment can be addressed within the broader IS risk framework — the DPIA output can feed the ISO 27001 risk register",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC3.2"],
+        "threshold": "SOC2 has no direct DPIA equivalent — the closest analogue is the risk identification process",
+        "summary": "CC3.2 (risk identification and analysis) is the closest SOC2 analogue — a DPIA output can serve as evidence of risk analysis. The SOC2 Privacy criteria P3.1/P3.2 address data minimisation at collection (not the DPIA process itself). Do not treat CC3.2 as satisfying GDPR Art.35 obligations",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      }
+    }
+  },
+  {
+    "id": "GDPR-RIGHTS",
+    "title": "Data Subject Rights Fulfilment",
+    "domain": "Data Governance",
+    "description": "Establish processes to fulfil data subject rights requests (access, rectification, erasure, portability, restriction, objection) within statutory timeframes.",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.15", "Art.16", "Art.17", "Art.18", "Art.20", "Art.21"],
+        "summary": "Rights to access, rectification, erasure, restriction, portability, and objection — respond without undue delay, within 1 month (extendable to 3 months for complex requests). These rights apply to ALL personal data processing, unlike HIPAA right of access which applies only to a 'designated record set'",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "SOC2": {
+        "refs": ["P5.1", "P5.2"],
+        "threshold": "Only when Privacy is in audit scope",
+        "summary": "Data subjects can access, review, and have personal information corrected or erased — SOC2 Privacy criteria cover a subset of GDPR rights (access and correction/erasure); portability and restriction have no SOC2 equivalent",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "HIPAA": {
+        "refs": ["§164.524"],
+        "summary": "HIPAA right of access: individuals have the right to access their PHI in a 'designated record set' — must respond within 30 days (extendable to 60). Narrower than GDPR: applies only to the designated record set (not all PHI); no portability, restriction, or objection rights. HIPAA access right is tiered by format and fee",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D"
+      }
+    }
+  }
+]
