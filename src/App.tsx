@@ -55,6 +55,25 @@ export default function App() {
     });
   }, [selectedFrameworks, filterFramework, searchQuery]);
 
+  const groupedControls = useMemo(() => {
+    const childrenByParent: Record<string, Control[]> = {};
+    visibleControls.filter(c => c.parentId).forEach(c => {
+      (childrenByParent[c.parentId!] ??= []).push(c);
+    });
+    const ordered: Control[] = [];
+    visibleControls.filter(c => !c.parentId).forEach(root => {
+      ordered.push(root);
+      childrenByParent[root.id]?.forEach(child => ordered.push(child));
+    });
+    const groups: { domain: string; controls: Control[] }[] = [];
+    for (const c of ordered) {
+      const last = groups.at(-1);
+      if (last?.domain === c.domain) last.controls.push(c);
+      else groups.push({ domain: c.domain, controls: [c] });
+    }
+    return groups;
+  }, [visibleControls]);
+
   const selectedControl = ALL_CONTROLS.find((c) => c.id === selectedControlId) ?? null;
 
   function handleChipClick(fwId: FrameworkId) {
@@ -178,20 +197,27 @@ export default function App() {
                 <p>No controls match your current filters.</p>
               </div>
             ) : (
-              visibleControls.map((control) => (
-                <ControlRow
-                  key={control.id}
-                  control={control}
-                  done={checks[control.id]?.done ?? false}
-                  hasNote={!!(notes[control.id]?.trim())}
-                  isChild={!!control.parentId}
-                  activeFrameworks={selectedFrameworks}
-                  filterFramework={filterFramework}
-                  isSelected={selectedControlId === control.id}
-                  onToggleCheck={() => toggleCheck(control.id)}
-                  onSelect={() => setSelectedControlId((prev) => (prev === control.id ? null : control.id))}
-                  onChipClick={handleChipClick}
-                />
+              groupedControls.map(({ domain, controls }) => (
+                <div key={domain}>
+                  <div className="px-4 py-1.5 text-[11px] font-semibold text-gray-500 uppercase tracking-widest bg-gray-900 border-b border-t border-gray-800">
+                    {domain}
+                  </div>
+                  {controls.map((control) => (
+                    <ControlRow
+                      key={control.id}
+                      control={control}
+                      done={checks[control.id]?.done ?? false}
+                      hasNote={!!(notes[control.id]?.trim())}
+                      isChild={!!control.parentId}
+                      activeFrameworks={selectedFrameworks}
+                      filterFramework={filterFramework}
+                      isSelected={selectedControlId === control.id}
+                      onToggleCheck={() => toggleCheck(control.id)}
+                      onSelect={() => setSelectedControlId((prev) => (prev === control.id ? null : control.id))}
+                      onChipClick={handleChipClick}
+                    />
+                  ))}
+                </div>
               ))
             )}
           </div>

@@ -53,7 +53,6 @@ export function ControlRow({
             <span className="text-[10px] text-gray-500 shrink-0" title="Has notes">✎</span>
           )}
         </div>
-        <div className="text-[11px] text-gray-500 mt-0.5">{control.domain}</div>
       </div>
 
       <FrameworkChips
