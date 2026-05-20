@@ -9,6 +9,7 @@ import { CoverageMatrix } from "./components/CoverageMatrix";
 import { ProgressBars } from "./components/ProgressBars";
 import { ChartsView } from "./components/ChartsView";
 import { Onboarding } from "./components/Onboarding";
+import { LandingPage } from "./components/LandingPage";
 import seedData from "./data/controls.seed.json";
 
 const ALL_CONTROLS = seedData as Control[];
@@ -26,6 +27,9 @@ export default function App() {
     resetAll,
   } = useUserStore();
 
+  const [screen, setScreen] = useState<"landing" | "onboarding">(
+    selectedFrameworks.length > 0 ? "onboarding" : "landing"
+  );
   const [selectedControlId, setSelectedControlId] = useState<string | null>(null);
   const [filterFramework, setFilterFramework] = useState<FrameworkId | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("list");
@@ -77,7 +81,15 @@ export default function App() {
   }
 
   if (selectedFrameworks.length === 0) {
-    return <Onboarding onConfirm={(frameworks) => frameworks.forEach(toggleFramework)} />;
+    if (screen === "landing") {
+      return <LandingPage onGetStarted={() => setScreen("onboarding")} />;
+    }
+    return (
+      <Onboarding
+        onConfirm={(frameworks) => frameworks.forEach(toggleFramework)}
+        onBack={() => setScreen("landing")}
+      />
+    );
   }
 
   const totalControls = visibleControls.filter((c) => !c.parentId).length;

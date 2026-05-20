@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import type { Control, FrameworkId } from "../types";
 import { FRAMEWORKS, FRAMEWORK_ORDER } from "../data/frameworks";
@@ -11,6 +11,28 @@ interface Props {
   onClose: () => void;
   onToggleCheck: () => void;
   onNoteChange: (note: string) => void;
+}
+
+const BASE = import.meta.env.BASE_URL;
+
+function ControlIllustration({ id }: { id: string }) {
+  const [src, setSrc] = useState(BASE + "controls/" + id + ".jpeg");
+  const [hidden, setHidden] = useState(false);
+  if (hidden) return null;
+  return (
+    <img
+      src={src}
+      alt=""
+      className="w-full aspect-square object-cover rounded-lg"
+      onError={() => {
+        if (src.endsWith(".jpeg")) {
+          setSrc(BASE + "controls/" + id + ".png");
+        } else {
+          setHidden(true);
+        }
+      }}
+    />
+  );
 }
 
 export function DetailDrawer({ control, done, note, activeFrameworks, onClose, onToggleCheck, onNoteChange }: Props) {
@@ -58,6 +80,11 @@ export function DetailDrawer({ control, done, note, activeFrameworks, onClose, o
           >
             ×
           </button>
+        </div>
+
+        {/* Control illustration */}
+        <div className="px-4 pt-4">
+          <ControlIllustration id={control.id} />
         </div>
 
         {/* Framework mappings */}
