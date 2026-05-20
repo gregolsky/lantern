@@ -40,7 +40,7 @@
     },
     {
       "id": "§164.308(a)(2)",
-      "title": "Assigned Security Responsibility",
+      "title": "Assigned Security Responsibility — Standard",
       "description": "Identify the security official who is responsible for the development and implementation of security policies and procedures.",
       "category": "Administrative Safeguards",
       "applicability": "required"
@@ -194,7 +194,7 @@
     },
     {
       "id": "§164.308(a)(8)",
-      "title": "Evaluation",
+      "title": "Evaluation — Standard",
       "description": "Perform a periodic technical and nontechnical evaluation, based initially upon the standards implemented under this rule, that establishes the extent to which a covered entity's security policies and procedures meet the requirements.",
       "category": "Administrative Safeguards",
       "applicability": "required"
@@ -243,14 +243,14 @@
     },
     {
       "id": "§164.310(b)",
-      "title": "Workstation Use",
+      "title": "Workstation Use — Standard",
       "description": "Implement policies and procedures that specify the proper functions to be performed, the manner in which those functions are to be performed, and the physical attributes of the surroundings of a specific workstation or class of workstation that can access ePHI.",
       "category": "Physical Safeguards",
       "applicability": "required"
     },
     {
       "id": "§164.310(c)",
-      "title": "Workstation Security",
+      "title": "Workstation Security — Standard",
       "description": "Implement physical safeguards for all workstations that access ePHI, to restrict access to authorized users.",
       "category": "Physical Safeguards",
       "applicability": "required"
@@ -320,14 +320,14 @@
     },
     {
       "id": "§164.312(a)(2)(iv)",
-      "title": "Encryption and Decryption",
+      "title": "Encryption and Decryption (at rest)",
       "description": "Implement a mechanism to encrypt and decrypt ePHI.",
       "category": "Technical Safeguards",
       "applicability": "addressable"
     },
     {
       "id": "§164.312(b)",
-      "title": "Audit Controls",
+      "title": "Audit Controls — Standard",
       "description": "Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use ePHI.",
       "category": "Technical Safeguards",
       "applicability": "required"
@@ -348,7 +348,7 @@
     },
     {
       "id": "§164.312(d)",
-      "title": "Person or Entity Authentication",
+      "title": "Person or Entity Authentication — Standard",
       "description": "Implement procedures to verify that a person or entity seeking access to ePHI is the one claimed.",
       "category": "Technical Safeguards",
       "applicability": "required"
@@ -382,8 +382,43 @@
       "applicability": "required"
     },
     {
+      "id": "§164.314(a)(2)(i)",
+      "title": "Business Associate Contracts — content requirements",
+      "description": "Business associate contracts must include provisions establishing permitted uses and disclosures, require the business associate to implement appropriate safeguards, report breaches, and ensure subcontractors comply with HIPAA.",
+      "category": "Organizational Requirements",
+      "applicability": "required"
+    },
+    {
+      "id": "§164.314(a)(2)(ii)",
+      "title": "Other Arrangements — documentation of satisfactory assurances",
+      "description": "When a covered entity and business associate are both governmental entities or when other legal requirements exist, the covered entity may use a memorandum of understanding or other arrangement in lieu of a written contract.",
+      "category": "Organizational Requirements",
+      "applicability": "conditional"
+    },
+    {
+      "id": "§164.314(a)(2)(iii)",
+      "title": "Business Associate Contracts — subcontractors",
+      "description": "A business associate that creates, receives, maintains, or transmits ePHI on behalf of another business associate must enter into a contract or arrangement that meets these requirements with each subcontractor.",
+      "category": "Organizational Requirements",
+      "applicability": "required"
+    },
+    {
+      "id": "§164.314(b)(1)",
+      "title": "Requirements for Group Health Plans — Standard",
+      "description": "A group health plan that creates, receives, maintains, or transmits ePHI must ensure that its plan documents reasonably and appropriately safeguard ePHI and include provisions to support privacy and security compliance.",
+      "category": "Organizational Requirements",
+      "applicability": "conditional"
+    },
+    {
+      "id": "§164.314(b)(2)(i)",
+      "title": "Group Health Plan — implement administrative, physical, and technical safeguards",
+      "description": "The plan sponsor must implement administrative, physical, and technical safeguards that reasonably and appropriately protect the confidentiality, integrity, and availability of ePHI it creates, receives, maintains, or transmits.",
+      "category": "Organizational Requirements",
+      "applicability": "conditional"
+    },
+    {
       "id": "§164.316(a)",
-      "title": "Policies and Procedures",
+      "title": "Policies and Procedures — Standard",
       "description": "Implement reasonable and appropriate policies and procedures to comply with the standards, implementation specifications, or other requirements of this subpart.",
       "category": "Policies, Procedures and Documentation",
       "applicability": "required"
@@ -392,6 +427,27 @@
       "id": "§164.316(b)(1)",
       "title": "Documentation — Standard",
       "description": "Maintain the policies and procedures implemented to comply with this subpart in written (which may be electronic) form.",
+      "category": "Policies, Procedures and Documentation",
+      "applicability": "required"
+    },
+    {
+      "id": "§164.316(b)(2)(i)",
+      "title": "Documentation — Time Limit",
+      "description": "Retain required documentation for 6 years from the date of its creation or the date when it last was in effect, whichever is later.",
+      "category": "Policies, Procedures and Documentation",
+      "applicability": "required"
+    },
+    {
+      "id": "§164.316(b)(2)(ii)",
+      "title": "Documentation — Availability",
+      "description": "Make documentation available to those persons responsible for implementing the procedures to which the documentation pertains.",
+      "category": "Policies, Procedures and Documentation",
+      "applicability": "required"
+    },
+    {
+      "id": "§164.316(b)(2)(iii)",
+      "title": "Documentation — Updates",
+      "description": "Review documentation periodically and update as needed in response to environmental or operational changes affecting the security of ePHI.",
       "category": "Policies, Procedures and Documentation",
       "applicability": "required"
     }

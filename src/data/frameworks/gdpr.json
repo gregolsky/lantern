@@ -18,10 +18,24 @@
       "applicability": "required"
     },
     {
+      "id": "Art.7",
+      "title": "Conditions for consent",
+      "description": "Where processing relies on consent, the controller must be able to demonstrate that the data subject consented. Consent must be freely given, specific, informed and unambiguous; requests must be presented clearly and distinguishably from other matters, and withdrawal must be as easy as giving consent.",
+      "category": "Principles",
+      "applicability": "conditional"
+    },
+    {
       "id": "Art.9",
       "title": "Processing of special categories of personal data",
       "description": "Processing of sensitive data (health, biometric, racial origin, political opinion etc.) is prohibited unless an explicit exception applies.",
       "category": "Principles",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.12",
+      "title": "Transparent information, communication and modalities for exercising rights",
+      "description": "The controller must provide information and communications about processing in a concise, transparent, intelligible and easily accessible form, using clear and plain language, and must facilitate the exercise of data subject rights without undue delay and free of charge in most cases.",
+      "category": "Transparency",
       "applicability": "required"
     },
     {
@@ -85,6 +99,13 @@
       "title": "Automated individual decision-making, including profiling",
       "description": "Data subjects have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal or similarly significant effects.",
       "category": "Data Subject Rights",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.24",
+      "title": "Responsibility of the controller",
+      "description": "Taking account of the nature, scope, context and purposes of processing as well as the risks to individuals, the controller must implement appropriate technical and organisational measures to ensure and be able to demonstrate that processing complies with the Regulation, including adoption of data protection policies where proportionate.",
+      "category": "Security & Accountability",
       "applicability": "required"
     },
     {
@@ -93,6 +114,13 @@
       "description": "Implement appropriate technical and organisational measures (e.g. pseudonymisation, data minimisation) both at the time of design and by default during processing.",
       "category": "Security & Accountability",
       "applicability": "required"
+    },
+    {
+      "id": "Art.26",
+      "title": "Joint controllers",
+      "description": "Where two or more controllers jointly determine the purposes and means of processing, they must transparently determine their respective responsibilities for compliance through an arrangement, particularly regarding the exercise of data subject rights, and make the essence of that arrangement available to data subjects.",
+      "category": "Security & Accountability",
+      "applicability": "conditional"
     },
     {
       "id": "Art.28",
@@ -127,14 +155,14 @@
       "title": "Communication of a personal data breach to the data subject",
       "description": "When a breach is likely to result in a high risk to individuals, communicate the breach to the affected data subjects without undue delay.",
       "category": "Breach Notification",
-      "applicability": "required"
+      "applicability": "conditional"
     },
     {
       "id": "Art.35",
       "title": "Data protection impact assessment (DPIA)",
       "description": "Prior to processing that is likely to result in a high risk, carry out a DPIA. Required when using new technologies, large-scale processing of sensitive data, or systematic monitoring.",
       "category": "Security & Accountability",
-      "applicability": "required"
+      "applicability": "conditional"
     },
     {
       "id": "Art.37",

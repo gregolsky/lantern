@@ -4,6 +4,13 @@
   "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
   "controls": [
     {
+      "id": "Art.21(1)",
+      "title": "Proportionate technical, operational and organisational measures",
+      "description": "Entities shall take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems. Measures shall be based on an all-hazards approach.",
+      "category": "Article 21 — General Obligation",
+      "applicability": "required"
+    },
+    {
       "id": "Art.21(2)(a)",
       "title": "Risk analysis and information system security policies",
       "description": "Policies on risk analysis and information system security, covering documentation of the risk management approach, risk appetite, and security objectives.",
@@ -62,7 +69,7 @@
     {
       "id": "Art.21(2)(i)",
       "title": "Human resources security, access control policies and asset management",
-      "description": "Human resources security, access control policies and asset management, including multi-factor authentication or continuous authentication solutions, secured voice/video/text communications, and secured emergency communication systems.",
+      "description": "Human resources security, access control policies and asset management.",
       "category": "Article 21 — Cybersecurity Risk-Management Measures",
       "applicability": "required"
     },
@@ -75,37 +82,51 @@
     },
     {
       "id": "Art.23(1)",
-      "title": "Early warning — significant incident notification",
-      "description": "Without undue delay, and in any event within 24 hours of becoming aware of a significant incident, notify the CSIRT or competent authority via early warning.",
-      "category": "Article 23 — Reporting Obligations",
+      "title": "Notification of significant incidents to CSIRT",
+      "description": "Essential and important entities must notify without undue delay their CSIRT or competent authority of any significant incident, and notify recipients of their services where the incident may adversely affect provision of those services.",
+      "category": "Article 23 — Significant Incident Reporting",
       "applicability": "required"
     },
     {
+      "id": "Art.23(2)",
+      "title": "Early warning — within 24 hours",
+      "description": "Without undue delay, and in any event within 24 hours of becoming aware of a significant incident, submit an early warning to the CSIRT or competent authority indicating whether the incident is suspected to be caused by unlawful or malicious acts and whether it may have a cross-border impact.",
+      "category": "Article 23 — Significant Incident Reporting",
+      "applicability": "required"
+    },
+    {
+      "id": "Art.23(3)",
+      "title": "Significant cyber threat communication to recipients",
+      "description": "Where a significant cyber threat is identified that could affect the recipients of services, notify those recipients of the threat and any protective or remedial measures they can take.",
+      "category": "Article 23 — Significant Incident Reporting",
+      "applicability": "conditional"
+    },
+    {
       "id": "Art.23(4)(a)",
-      "title": "Incident notification — within 72 hours",
-      "description": "Submit incident notification within 72 hours of becoming aware, including initial assessment of severity, impact, and indicators of compromise.",
-      "category": "Article 23 — Reporting Obligations",
+      "title": "Early warning — within 24 hours",
+      "description": "Submit an early warning to CSIRT or competent authority within 24 hours of becoming aware of a significant incident, indicating whether the incident is suspected to be caused by unlawful or malicious acts and whether it may have a cross-border impact.",
+      "category": "Article 23 — Significant Incident Reporting",
       "applicability": "required"
     },
     {
       "id": "Art.23(4)(b)",
-      "title": "Intermediate report (on request)",
-      "description": "Provide an intermediate status report upon request of the CSIRT or competent authority.",
-      "category": "Article 23 — Reporting Obligations",
-      "applicability": "conditional"
-    },
-    {
-      "id": "Art.23(4)(c)",
-      "title": "Final incident report — within 1 month",
-      "description": "Submit a final report within one month of the incident notification, including root cause analysis, mitigation measures taken, and cross-border impact.",
-      "category": "Article 23 — Reporting Obligations",
+      "title": "Incident notification — within 72 hours",
+      "description": "Submit incident notification within 72 hours of becoming aware, including initial assessment of severity, impact, and indicators of compromise.",
+      "category": "Article 23 — Significant Incident Reporting",
       "applicability": "required"
     },
     {
-      "id": "Art.21(1)",
-      "title": "Proportionate technical, operational and organisational measures",
-      "description": "Entities shall take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems. Measures shall be based on an all-hazards approach.",
-      "category": "Article 21 — General Obligation",
+      "id": "Art.23(4)(c)",
+      "title": "Intermediate report (on request)",
+      "description": "Provide an intermediate status report upon request of the CSIRT or competent authority.",
+      "category": "Article 23 — Significant Incident Reporting",
+      "applicability": "conditional"
+    },
+    {
+      "id": "Art.23(4)(d)",
+      "title": "Final incident report — within 1 month",
+      "description": "Submit a final report within one month of the incident notification, including root cause analysis, mitigation measures taken, and cross-border impact.",
+      "category": "Article 23 — Significant Incident Reporting",
       "applicability": "required"
     }
   ]

@@ -3,66 +3,432 @@
   "note": "Criterion IDs and one-line authored summaries. Full text in AICPA TSP Section 100 PDF.",
   "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022",
   "controls": [
-    { "id": "CC1.1", "title": "Board demonstrates commitment to integrity and ethical values",               "category": "Common Criteria — Control Environment" },
-    { "id": "CC1.2", "title": "Board independent of management; exercises oversight of internal controls", "category": "Common Criteria — Control Environment" },
-    { "id": "CC1.3", "title": "Management establishes reporting structures and authorities",               "category": "Common Criteria — Control Environment" },
-    { "id": "CC1.4", "title": "Competence policies established for roles that affect internal controls",  "category": "Common Criteria — Control Environment" },
-    { "id": "CC1.5", "title": "Accountability enforced for internal control responsibilities",            "category": "Common Criteria — Control Environment" },
-    { "id": "CC2.1", "title": "COSO principle: uses relevant quality information to achieve objectives",  "category": "Common Criteria — Information & Communication" },
-    { "id": "CC2.2", "title": "Internal communication of control information and responsibilities",       "category": "Common Criteria — Information & Communication" },
-    { "id": "CC2.3", "title": "Communication with external parties on matters affecting controls",        "category": "Common Criteria — Information & Communication" },
-    { "id": "CC3.1", "title": "Objectives specified with sufficient clarity to identify related risks",   "category": "Common Criteria — Risk Assessment" },
-    { "id": "CC3.2", "title": "Risks to achievement of objectives identified and analyzed",              "category": "Common Criteria — Risk Assessment" },
-    { "id": "CC3.3", "title": "Fraud risk assessed including risk of management override",               "category": "Common Criteria — Risk Assessment" },
-    { "id": "CC3.4", "title": "Changes that could affect the system of internal controls identified",    "category": "Common Criteria — Risk Assessment" },
-    { "id": "CC4.1", "title": "Ongoing and separate evaluations to ascertain control effectiveness",     "category": "Common Criteria — Monitoring" },
-    { "id": "CC4.2", "title": "Control deficiencies evaluated and communicated to responsible parties",  "category": "Common Criteria — Monitoring" },
-    { "id": "CC5.1", "title": "Control activities selected and developed to mitigate risks",             "category": "Common Criteria — Control Activities" },
-    { "id": "CC5.2", "title": "Technology controls selected and developed to achieve objectives",        "category": "Common Criteria — Control Activities" },
-    { "id": "CC5.3", "title": "Controls deployed through policies and procedures",                      "category": "Common Criteria — Control Activities" },
-    { "id": "CC6.1", "title": "Logical and physical access controls limit access to system assets",     "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC6.2", "title": "New internal and external users provisioned with appropriate access",    "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC6.3", "title": "Access to system assets removed when no longer required",               "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC6.4", "title": "Physical access to facilities restricted and monitored",                 "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC6.5", "title": "Assets protected from unauthorized access and environmental threats",    "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC6.6", "title": "Boundaries of system protect against unauthorized external access",       "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC6.7", "title": "Restricted access to confidential information during transmission",      "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC6.8", "title": "Unauthorized software prevented from accessing system resources",        "category": "Common Criteria — Logical & Physical Access" },
-    { "id": "CC7.1", "title": "Vulnerabilities detected through monitoring of configurations",          "category": "Common Criteria — System Operations" },
-    { "id": "CC7.2", "title": "Anomalies and security incidents detected through monitoring",           "category": "Common Criteria — System Operations" },
-    { "id": "CC7.3", "title": "Identified security incidents evaluated and responded to",               "category": "Common Criteria — System Operations" },
-    { "id": "CC7.4", "title": "Security incidents contained; impact documented; root cause analyzed",   "category": "Common Criteria — System Operations" },
-    { "id": "CC7.5", "title": "Incident response communications to affected parties and regulators",    "category": "Common Criteria — System Operations" },
-    { "id": "CC8.1", "title": "Changes to infrastructure, data, software and procedures managed",      "category": "Common Criteria — Change Management" },
-    { "id": "CC9.1", "title": "Business disruption risks identified and mitigation strategies assessed","category": "Common Criteria — Risk Mitigation" },
-    { "id": "CC9.2", "title": "Business partners and vendors assessed and managed for risk",            "category": "Common Criteria — Risk Mitigation" },
-    { "id": "A1.1",  "title": "Current processing capacity and usage monitored and evaluated",         "category": "Availability" },
-    { "id": "A1.2",  "title": "Environmental, regulatory and technological changes that affect availability evaluated","category": "Availability" },
-    { "id": "A1.3",  "title": "Recovery plan to restore availability in case of disruption",           "category": "Availability" },
-    { "id": "C1.1",  "title": "Confidential information identified and designated",                    "category": "Confidentiality" },
-    { "id": "C1.2",  "title": "Confidential information protected during retention and disposal",      "category": "Confidentiality" },
-    { "id": "PI1.1", "title": "Processing complete, accurate and timely per system requirements",      "category": "Processing Integrity" },
-    { "id": "PI1.2", "title": "System inputs validated and errors corrected",                         "category": "Processing Integrity" },
-    { "id": "PI1.3", "title": "System processing errors detected and corrected",                      "category": "Processing Integrity" },
-    { "id": "PI1.4", "title": "System output complete, accurate and distributed to authorized parties","category": "Processing Integrity" },
-    { "id": "PI1.5", "title": "Stored data protected, retained, and disposed in accordance with requirements","category": "Processing Integrity" },
-    { "id": "P1.1",  "title": "Privacy notice provided to data subjects about collection and use",     "category": "Privacy" },
-    { "id": "P2.1",  "title": "Personal information collected only with consent or lawful basis",      "category": "Privacy" },
-    { "id": "P3.1",  "title": "Personal information collected limited to that which is relevant",     "category": "Privacy" },
-    { "id": "P3.2",  "title": "Sensitive personal information collected only with explicit consent",  "category": "Privacy" },
-    { "id": "P4.1",  "title": "Personal information used only for purposes for which collected",      "category": "Privacy" },
-    { "id": "P4.2",  "title": "Personal information retained for no longer than necessary",          "category": "Privacy" },
-    { "id": "P4.3",  "title": "Obsolete personal information destroyed or anonymized",               "category": "Privacy" },
-    { "id": "P5.1",  "title": "Data subjects can access, review and correct their information",      "category": "Privacy" },
-    { "id": "P5.2",  "title": "Personal information corrected or erased upon verified request",      "category": "Privacy" },
-    { "id": "P6.1",  "title": "Personal information disclosed only to authorized parties",           "category": "Privacy" },
-    { "id": "P6.2",  "title": "Disclosures authorized and limited to stated purposes",               "category": "Privacy" },
-    { "id": "P6.3",  "title": "Third parties informed of privacy commitments; compliance monitored", "category": "Privacy" },
-    { "id": "P6.4",  "title": "Individuals notified of breaches affecting their personal information","category": "Privacy" },
-    { "id": "P6.5",  "title": "Unsolicited personal information handled per privacy notice",         "category": "Privacy" },
-    { "id": "P6.6",  "title": "Requests from data subjects to correct or erase information honored", "category": "Privacy" },
-    { "id": "P6.7",  "title": "Personal information transferred to third parties per agreements",    "category": "Privacy" },
-    { "id": "P7.1",  "title": "Personal information quality maintained per standards",               "category": "Privacy" },
-    { "id": "P8.1",  "title": "Inquiries and complaints from data subjects addressed promptly",      "category": "Privacy" }
+    {
+      "id": "CC1.1",
+      "title": "Board demonstrates commitment to integrity and ethical values",
+      "description": "The board and management visibly champion integrity and ethical conduct, setting the tone for behavior across the organization",
+      "category": "Common Criteria — Control Environment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC1.2",
+      "title": "Board independent of management; exercises oversight of internal controls",
+      "description": "An independent board provides effective oversight of management's design and operation of internal controls",
+      "category": "Common Criteria — Control Environment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC1.3",
+      "title": "Management establishes reporting structures and authorities",
+      "description": "Management defines clear reporting lines, authorities, and responsibilities to support the achievement of control objectives",
+      "category": "Common Criteria — Control Environment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC1.4",
+      "title": "Competence policies established for roles that affect internal controls",
+      "description": "The organization attracts, develops, and retains competent personnel for roles that impact internal control effectiveness",
+      "category": "Common Criteria — Control Environment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC1.5",
+      "title": "Accountability enforced for internal control responsibilities",
+      "description": "Individuals are held accountable for fulfilling their assigned internal control duties in pursuit of organizational objectives",
+      "category": "Common Criteria — Control Environment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC2.1",
+      "title": "Uses relevant quality information to support the achievement of objectives",
+      "description": "Relevant, accurate, and timely information is obtained or generated to support the functioning of internal controls",
+      "category": "Common Criteria — Information & Communication",
+      "applicability": "required"
+    },
+    {
+      "id": "CC2.2",
+      "title": "Internal communication of control information and responsibilities",
+      "description": "Internal communications convey control objectives, responsibilities, and information needed for personnel to perform their roles",
+      "category": "Common Criteria — Information & Communication",
+      "applicability": "required"
+    },
+    {
+      "id": "CC2.3",
+      "title": "Communication with external parties on matters affecting controls",
+      "description": "The organization communicates with customers, vendors, and other external parties on matters affecting internal controls",
+      "category": "Common Criteria — Information & Communication",
+      "applicability": "required"
+    },
+    {
+      "id": "CC3.1",
+      "title": "Objectives specified with sufficient clarity to identify related risks",
+      "description": "The organization defines objectives with enough specificity to allow identification and assessment of related risks",
+      "category": "Common Criteria — Risk Assessment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC3.2",
+      "title": "Risks to achievement of objectives identified and analyzed",
+      "description": "Risks to achieving organizational objectives are identified and analyzed as a basis for determining how to manage them",
+      "category": "Common Criteria — Risk Assessment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC3.3",
+      "title": "Fraud risk assessed including risk of management override",
+      "description": "The organization assesses the potential for fraud, including the risk of management override of controls",
+      "category": "Common Criteria — Risk Assessment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC3.4",
+      "title": "Changes that could affect the system of internal controls identified",
+      "description": "Changes in the business, regulatory, or operating environment that could impact internal controls are identified and assessed",
+      "category": "Common Criteria — Risk Assessment",
+      "applicability": "required"
+    },
+    {
+      "id": "CC4.1",
+      "title": "Ongoing and separate evaluations to ascertain control effectiveness",
+      "description": "Ongoing and periodic separate evaluations are performed to determine whether internal controls are present and functioning",
+      "category": "Common Criteria — Monitoring",
+      "applicability": "required"
+    },
+    {
+      "id": "CC4.2",
+      "title": "Control deficiencies evaluated and communicated to responsible parties",
+      "description": "Control deficiencies are evaluated and communicated in a timely manner to those responsible for taking corrective action",
+      "category": "Common Criteria — Monitoring",
+      "applicability": "required"
+    },
+    {
+      "id": "CC5.1",
+      "title": "Control activities selected and developed to mitigate risks",
+      "description": "Control activities are selected and developed to help reduce risks to the achievement of objectives to acceptable levels",
+      "category": "Common Criteria — Control Activities",
+      "applicability": "required"
+    },
+    {
+      "id": "CC5.2",
+      "title": "Technology controls selected and developed to achieve objectives",
+      "description": "General technology controls are designed and implemented to support the achievement of the organization's objectives",
+      "category": "Common Criteria — Control Activities",
+      "applicability": "required"
+    },
+    {
+      "id": "CC5.3",
+      "title": "Controls deployed through policies and procedures",
+      "description": "Control activities are deployed through formal policies that establish expectations and procedures that put them into action",
+      "category": "Common Criteria — Control Activities",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.1",
+      "title": "Logical and physical access controls limit access to system assets",
+      "description": "Logical and physical access controls restrict access to information assets to authorized users only",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.2",
+      "title": "New internal and external users provisioned with appropriate access",
+      "description": "New internal and external users are registered and authorized prior to being granted access to system resources",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.3",
+      "title": "Access to system assets removed when no longer required",
+      "description": "Access rights are modified or revoked promptly when users change roles or no longer require access to system assets",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.4",
+      "title": "Physical access to facilities restricted and monitored",
+      "description": "Physical access to facilities housing information assets is restricted to authorized personnel and continuously monitored",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.5",
+      "title": "Assets protected from unauthorized access and environmental threats",
+      "description": "Logical and physical safeguards protect information assets from unauthorized use, disclosure, and environmental hazards",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.6",
+      "title": "Boundaries of system protect against unauthorized external access",
+      "description": "Network and system boundaries are protected against unauthorized access originating from outside the system's perimeter",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.7",
+      "title": "Restricted access to confidential information during transmission",
+      "description": "Confidential information is protected during transmission, movement, and removal through encryption or equivalent safeguards",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC6.8",
+      "title": "Unauthorized software prevented from accessing system resources",
+      "description": "Controls prevent or detect introduction of unauthorized or malicious software into the production environment",
+      "category": "Common Criteria — Logical & Physical Access",
+      "applicability": "required"
+    },
+    {
+      "id": "CC7.1",
+      "title": "Vulnerabilities detected through monitoring of configurations",
+      "description": "Configurations are monitored against baselines to detect vulnerabilities and unauthorized changes in the environment",
+      "category": "Common Criteria — System Operations",
+      "applicability": "required"
+    },
+    {
+      "id": "CC7.2",
+      "title": "Anomalies and security incidents detected through monitoring",
+      "description": "System components and user activity are monitored to detect anomalies indicative of malicious acts or security events",
+      "category": "Common Criteria — System Operations",
+      "applicability": "required"
+    },
+    {
+      "id": "CC7.3",
+      "title": "Identified security incidents evaluated and responded to",
+      "description": "Detected security events are evaluated to determine whether they represent incidents requiring formal response actions",
+      "category": "Common Criteria — System Operations",
+      "applicability": "required"
+    },
+    {
+      "id": "CC7.4",
+      "title": "Security incidents contained; impact documented; root cause analyzed",
+      "description": "Confirmed incidents are contained, remediated, documented, and analyzed to determine root cause and prevent recurrence",
+      "category": "Common Criteria — System Operations",
+      "applicability": "required"
+    },
+    {
+      "id": "CC7.5",
+      "title": "Incident response communications to affected parties and regulators",
+      "description": "The organization communicates with affected customers, regulators, and other stakeholders about incidents as required",
+      "category": "Common Criteria — System Operations",
+      "applicability": "required"
+    },
+    {
+      "id": "CC8.1",
+      "title": "Changes to infrastructure, data, software and procedures managed",
+      "description": "Changes to infrastructure, data, software, and procedures are authorized, designed, tested, and approved before deployment",
+      "category": "Common Criteria — Change Management",
+      "applicability": "required"
+    },
+    {
+      "id": "CC9.1",
+      "title": "Business disruption risks identified and mitigation strategies assessed",
+      "description": "Risks of business disruption are identified, assessed, and mitigated through controls such as insurance and contingency plans",
+      "category": "Common Criteria — Risk Mitigation",
+      "applicability": "required"
+    },
+    {
+      "id": "CC9.2",
+      "title": "Business partners and vendors assessed and managed for risk",
+      "description": "Risks associated with vendors and business partners are assessed and managed throughout the relationship lifecycle",
+      "category": "Common Criteria — Risk Mitigation",
+      "applicability": "required"
+    },
+    {
+      "id": "A1.1",
+      "title": "Current processing capacity and usage monitored and evaluated",
+      "description": "Capacity and usage are monitored to ensure sufficient processing resources are available to meet availability commitments",
+      "category": "Availability",
+      "applicability": "conditional"
+    },
+    {
+      "id": "A1.2",
+      "title": "Environmental, regulatory and technological changes that affect availability evaluated",
+      "description": "Environmental protections, software, and infrastructure are designed and maintained to support continued system availability",
+      "category": "Availability",
+      "applicability": "conditional"
+    },
+    {
+      "id": "A1.3",
+      "title": "Recovery plan to restore availability in case of disruption",
+      "description": "Recovery plans and procedures are tested regularly to ensure availability can be restored after a disruption",
+      "category": "Availability",
+      "applicability": "conditional"
+    },
+    {
+      "id": "C1.1",
+      "title": "Confidential information identified and designated",
+      "description": "Confidential information is identified and designated so that it can be afforded appropriate protection during its lifecycle",
+      "category": "Confidentiality",
+      "applicability": "conditional"
+    },
+    {
+      "id": "C1.2",
+      "title": "Confidential information protected during retention and disposal",
+      "description": "Confidential information is securely retained and disposed of in a manner that prevents unauthorized disclosure",
+      "category": "Confidentiality",
+      "applicability": "conditional"
+    },
+    {
+      "id": "PI1.1",
+      "title": "Processing complete, accurate and timely per system requirements",
+      "description": "Information used in processing is obtained, produced, and maintained completely, accurately, and on a timely basis",
+      "category": "Processing Integrity",
+      "applicability": "conditional"
+    },
+    {
+      "id": "PI1.2",
+      "title": "System inputs validated and errors corrected",
+      "description": "System inputs are validated for completeness and accuracy, with errors identified and corrected before further processing",
+      "category": "Processing Integrity",
+      "applicability": "conditional"
+    },
+    {
+      "id": "PI1.3",
+      "title": "System processing errors detected and corrected",
+      "description": "Processing activities are performed in line with specifications, with errors detected and corrected promptly",
+      "category": "Processing Integrity",
+      "applicability": "conditional"
+    },
+    {
+      "id": "PI1.4",
+      "title": "System output complete, accurate and distributed to authorized parties",
+      "description": "Outputs are complete, accurate, and delivered to the appropriate authorized recipients in accordance with specifications",
+      "category": "Processing Integrity",
+      "applicability": "conditional"
+    },
+    {
+      "id": "PI1.5",
+      "title": "Stored data protected, retained, and disposed in accordance with requirements",
+      "description": "Stored data inputs and outputs are retained, protected, and disposed of consistently with processing integrity objectives",
+      "category": "Processing Integrity",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P1.1",
+      "title": "Privacy notice provided to data subjects about collection and use",
+      "description": "Data subjects are provided with notice describing how their personal information is collected, used, retained, and disclosed",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P2.1",
+      "title": "Personal information collected only with consent or lawful basis",
+      "description": "Personal information is collected only after obtaining valid consent or establishing another lawful basis for processing",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P3.1",
+      "title": "Personal information collected limited to that which is relevant",
+      "description": "Collection of personal information is limited to what is relevant and necessary for the disclosed purposes",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P3.2",
+      "title": "Sensitive personal information collected only with explicit consent",
+      "description": "Sensitive categories of personal information are collected only after obtaining explicit consent from the data subject",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P4.1",
+      "title": "Personal information used only for purposes for which collected",
+      "description": "Personal information is used only for the purposes identified in the privacy notice and consented to by the data subject",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P4.2",
+      "title": "Personal information retained for no longer than necessary",
+      "description": "Personal information is retained only for as long as needed to fulfill the stated purposes or meet legal obligations",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P4.3",
+      "title": "Obsolete personal information destroyed or anonymized",
+      "description": "Personal information that is no longer needed is securely destroyed, deleted, or anonymized to prevent further use",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P5.1",
+      "title": "Data subjects can access, review and correct their information",
+      "description": "Data subjects are provided with the ability to access and review their personal information held by the organization",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P5.2",
+      "title": "Personal information corrected or erased upon verified request",
+      "description": "Verified requests from data subjects to correct, update, or erase personal information are acted upon in a timely manner",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P6.1",
+      "title": "Personal information disclosed only to authorized parties",
+      "description": "Personal information is disclosed only to third parties that are authorized and have committed to equivalent protections",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P6.2",
+      "title": "Disclosures authorized and limited to stated purposes",
+      "description": "Disclosures of personal information are authorized and limited to the purposes described in the privacy notice",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P6.3",
+      "title": "Third parties informed of privacy commitments; compliance monitored",
+      "description": "Third parties receiving personal information are informed of privacy commitments and monitored for ongoing compliance",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P6.4",
+      "title": "Individuals notified of breaches affecting their personal information",
+      "description": "Affected data subjects and regulators are notified of incidents involving unauthorized disclosure of personal information",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P6.5",
+      "title": "Unsolicited personal information handled per privacy notice",
+      "description": "Personal information received without solicitation is evaluated and handled in line with the organization's privacy commitments",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P6.6",
+      "title": "Requests from data subjects to correct or erase information honored",
+      "description": "Requests from data subjects to amend or remove personal information are processed, verified, and propagated to third parties",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P6.7",
+      "title": "Personal information transferred to third parties per agreements",
+      "description": "Personal information transferred to third parties is governed by agreements that enforce equivalent privacy obligations",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P7.1",
+      "title": "Personal information quality maintained per standards",
+      "description": "Personal information is maintained to be accurate, complete, and relevant for the purposes for which it is used",
+      "category": "Privacy",
+      "applicability": "conditional"
+    },
+    {
+      "id": "P8.1",
+      "title": "Inquiries and complaints from data subjects addressed promptly",
+      "description": "Inquiries, complaints, and disputes raised by data subjects regarding privacy practices are addressed promptly and tracked",
+      "category": "Privacy",
+      "applicability": "conditional"
+    }
   ]
 }

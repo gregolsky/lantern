@@ -49,8 +49,8 @@
         "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
       },
       "NIS2": {
-        "refs": ["Art.23(1)", "Art.23(4)(a)", "Art.23(4)(c)"],
-        "summary": "Three-stage reporting to CSIRT/authority: 24h early warning → 72h notification → 1-month final report. Strictest timeline of any framework — 3× faster than GDPR for initial notification",
+        "refs": ["Art.23(1)", "Art.23(2)", "Art.23(3)", "Art.23(4)(b)", "Art.23(4)(d)"],
+        "summary": "Multi-stage reporting: general notification obligation (Art.23(1)) + 24h early warning to CSIRT (Art.23(2)) → 72h incident notification (Art.23(4)(b)) → 1-month final report (Art.23(4)(d)). Art.23(3) adds obligation to notify recipients of significant cyber threats.",
         "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
       },
       "HIPAA": {
@@ -73,9 +73,9 @@
     "parentId": "INC-RPT",
     "frameworks": {
       "NIS2": {
-        "refs": ["Art.23(1)"],
+        "refs": ["Art.23(2)", "Art.23(4)(a)"],
         "threshold": "24 hours from awareness — fastest mandatory reporting deadline across all five frameworks",
-        "summary": "Indicate whether incident is suspected to be malicious, whether it has cross-border impact, and which sectors/services are affected. No equivalent obligation in GDPR, HIPAA, or SOC2",
+        "summary": "Indicate whether incident is suspected to be malicious, whether it has cross-border impact, and which sectors/services are affected. Art.23(2) is the CSIRT notification; Art.23(4)(a) is the corresponding sub-item under the multi-stage notification process. No equivalent obligation in GDPR, HIPAA, or SOC2",
         "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
       }
     }
@@ -88,7 +88,7 @@
     "parentId": "INC-RPT",
     "frameworks": {
       "NIS2": {
-        "refs": ["Art.23(4)(a)"],
+        "refs": ["Art.23(4)(b)"],
         "threshold": "72 hours from awareness",
         "summary": "Full incident notification: initial assessment of severity, affected services, indicators of compromise, and whether a cross-border impact is likely. Aligns with GDPR 72h supervisory-authority deadline but NIS2 notification goes to CSIRT/competent authority, not a data protection authority",
         "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
@@ -103,7 +103,7 @@
     "parentId": "INC-RPT",
     "frameworks": {
       "NIS2": {
-        "refs": ["Art.23(4)(c)"],
+        "refs": ["Art.23(4)(d)"],
         "threshold": "1 month from initial incident notification",
         "summary": "Final report: detailed description, incident type, root cause, mitigation measures, cross-border impact. No equivalent final-report requirement exists in GDPR or HIPAA — those frameworks do not mandate post-incident reporting back to authorities",
         "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
@@ -882,8 +882,8 @@
         "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
       },
       "HIPAA": {
-        "refs": ["§164.316(b)(2)(i)"],
-        "summary": "Documentation retention: security policies, procedures, and records must be retained for 6 years from creation or last effective date — a specific mandatory period not found in ISO or NIS2. Note: PHI retention periods are governed by state law (typically 6–10 years for adults), not HIPAA itself",
+        "refs": ["§164.316(b)(2)(i)", "§164.316(b)(2)(ii)", "§164.316(b)(2)(iii)"],
+        "summary": "Documentation retention: security policies, procedures, and records must be retained for 6 years (§164.316(b)(2)(i)); documentation must be made available to responsible persons (§164.316(b)(2)(ii)); documentation must be reviewed and updated periodically (§164.316(b)(2)(iii)). HIPAA is the only framework with a specific 6-year retention mandate for security documentation.",
         "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
       },
       "SOC2": {
@@ -1073,6 +1073,130 @@
         "refs": ["§164.524"],
         "summary": "HIPAA right of access: individuals have the right to access their PHI in a 'designated record set' — must respond within 30 days (extendable to 60). Narrower than GDPR: applies only to the designated record set (not all PHI); no portability, restriction, or objection rights. HIPAA access right is tiered by format and fee",
         "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-D"
+      }
+    }
+  },
+  {
+    "id": "BAA-CONTENT",
+    "title": "Business Associate Contract Content Requirements",
+    "domain": "Supply Chain",
+    "description": "Ensure business associate agreements include all required provisions: permitted uses and disclosures, safeguard obligations, breach reporting, subcontractor flow-down, and access rights.",
+    "parentId": "VENDOR",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.314(a)(2)(i)", "§164.314(a)(2)(ii)", "§164.314(a)(2)(iii)"],
+        "summary": "§164.314(a)(2)(i): BAA must specify permitted uses/disclosures, require appropriate safeguards, mandate breach reporting, and ensure subcontractor compliance. §164.314(a)(2)(ii): where both parties are government entities or other legal arrangements exist, a memorandum of understanding may substitute for a written contract. §164.314(a)(2)(iii): BAs must flow down contractual obligations to their own subcontractors.",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      }
+    }
+  },
+  {
+    "id": "HIPAA-GHP",
+    "title": "Group Health Plan Security Requirements",
+    "domain": "Supply Chain",
+    "description": "Group health plans that create, receive, maintain, or transmit ePHI must ensure plan documents include provisions requiring the plan sponsor to implement appropriate safeguards and restrict ePHI use.",
+    "parentId": "VENDOR",
+    "frameworks": {
+      "HIPAA": {
+        "refs": ["§164.314(b)(1)", "§164.314(b)(2)(i)"],
+        "threshold": "Conditional — applies only to group health plans and their plan sponsors",
+        "summary": "§164.314(b)(1): plan documents must require the plan sponsor to implement administrative, physical, and technical safeguards for ePHI. §164.314(b)(2)(i): plan sponsor must implement safeguards and agree to restrictions on ePHI use. Unique to HIPAA — no equivalent group-health-plan-sponsor obligation exists in GDPR, ISO 27001, NIS2, or SOC2.",
+        "citation": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C"
+      }
+    }
+  },
+  {
+    "id": "GDPR-CONSENT",
+    "title": "Consent Management",
+    "domain": "Data Governance",
+    "description": "Where consent is the legal basis for processing, obtain freely given, specific, informed, and unambiguous consent; maintain evidence of consent; make withdrawal as easy as giving consent.",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.7", "Art.6"],
+        "threshold": "Conditional — applies only when consent (Art.6(1)(a)) is the chosen legal basis for processing",
+        "summary": "Art.7: controller must demonstrate consent was given and ensure withdrawal is as easy as giving it; consent must be distinguishable from other matters. Art.6 establishes consent as one of six lawful bases. Key nuance: if another lawful basis (e.g. contract, legitimate interest) applies, Art.7 does not — consent should not be used as a fallback when another basis is more appropriate.",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "SOC2": {
+        "refs": ["P2.1"],
+        "threshold": "Only when Privacy is in audit scope",
+        "summary": "Personal information collected only with consent or lawful basis — P2.1 is the SOC2 analogue to GDPR consent and lawful basis requirements.",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      }
+    }
+  },
+  {
+    "id": "GDPR-TRANSPARENCY",
+    "title": "Privacy Notice and Transparency Obligations",
+    "domain": "Data Governance",
+    "description": "Provide data subjects with clear, accessible information about processing activities at the time of collection or contact, covering purposes, legal basis, retention, and their rights.",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.12", "Art.13", "Art.14"],
+        "summary": "Art.12: information must be provided in a concise, transparent, intelligible, and easily accessible form using clear and plain language; requests for data-subject rights must be facilitated. Art.13: information when personal data is collected directly from the subject. Art.14: information when data is not obtained from the subject. Key nuance: Art.13 and Art.14 differ in what must be disclosed — Art.14 additionally requires disclosing the source of the data.",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "SOC2": {
+        "refs": ["P1.1"],
+        "threshold": "Only when Privacy is in audit scope",
+        "summary": "Privacy notice provided to data subjects covering the entity's privacy practices — SOC2 P1.1 maps to GDPR Art.13/14 privacy notice obligations.",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      },
+      "ISO27001": {
+        "refs": ["A.5.34"],
+        "summary": "Privacy and protection of PII — ISO requires policies for managing personal data that include transparency requirements aligned with applicable law.",
+        "citation": "https://www.iso.org/standard/27001"
+      }
+    }
+  },
+  {
+    "id": "GDPR-ACCOUNTABILITY",
+    "title": "Controller Accountability and Governance",
+    "domain": "Data Governance",
+    "description": "Implement appropriate technical and organisational measures to demonstrate that processing complies with GDPR; maintain policies and be able to evidence compliance to supervisory authorities on request.",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.24", "Art.5(2)"],
+        "summary": "Art.24: controller must implement appropriate measures and be able to demonstrate compliance — this is the foundational accountability obligation. Art.5(2): the accountability principle requires the controller to be responsible for, and able to demonstrate compliance with, all six data-protection principles. Key nuance: accountability is prospective (build and document now) and retrospective (prove it on demand) — it is the GDPR's answer to 'how do you prove compliance?'",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      },
+      "ISO27001": {
+        "refs": ["A.5.31", "A.5.35"],
+        "summary": "A.5.31: legal, statutory, regulatory, and contractual requirements — identify and document compliance obligations. A.5.35: independent review of information security — governance accountability mechanism.",
+        "citation": "https://www.iso.org/standard/27001"
+      },
+      "SOC2": {
+        "refs": ["CC1.2", "CC1.3", "CC1.5"],
+        "summary": "Board oversight and accountability (CC1.2–CC1.3); accountability enforced for internal control responsibilities (CC1.5) — SOC2 governance criteria are the closest analogue to GDPR controller accountability.",
+        "citation": "https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022"
+      }
+    }
+  },
+  {
+    "id": "GDPR-JOINT-CTRL",
+    "title": "Joint Controller Arrangements",
+    "domain": "Data Governance",
+    "description": "Where two or more organisations jointly determine the purposes and means of processing personal data, establish a transparent arrangement defining each party's responsibilities and make its essence available to data subjects.",
+    "frameworks": {
+      "GDPR": {
+        "refs": ["Art.26"],
+        "threshold": "Conditional — applies only when joint control exists (both parties determine purposes AND means)",
+        "summary": "Art.26: joint controllers must transparently determine their respective responsibilities via a documented arrangement; the essence of that arrangement must be available to data subjects. Key nuance: joint control differs from controller-processor; if one party merely processes on behalf of the other, Art.28 (processor) applies instead. Misclassifying a joint-control relationship as a processor arrangement is a common GDPR error.",
+        "citation": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+      }
+    }
+  },
+  {
+    "id": "NIS2-RECIPIENT-NOTIFY",
+    "title": "NIS2 — Service Recipient Notification",
+    "domain": "Incident Response",
+    "description": "Notify recipients of your services of significant incidents (where they may be adversely affected) and of significant cyber threats (so they can take protective measures).",
+    "parentId": "INC-RPT",
+    "frameworks": {
+      "NIS2": {
+        "refs": ["Art.23(1)", "Art.23(3)"],
+        "summary": "Art.23(1): upon becoming aware of a significant incident, notify recipients of services where the incident may adversely affect them. Art.23(3): where a significant cyber threat is identified, notify potentially affected service recipients of the threat and communicate protective measures they can take. Key nuance: this is a RECIPIENT-facing notification, distinct from the AUTHORITY-facing CSIRT notifications in Art.23(2)/(4). No direct equivalent in GDPR (Art.34 covers breach to individuals, not cyber threats) or HIPAA.",
+        "citation": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
       }
     }
   }

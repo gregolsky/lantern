@@ -1,0 +1,758 @@
+================================================================================
+  LANTERN — IMAGE GENERATION PROMPTS
+  Style guide + placements for all graphics in the app
+================================================================================
+
+CONSISTENT STYLE (paste this into every prompt)
+------------------------------------------------
+Cozy fantasy oil painting illustration in the style of the Golden Frog Inn
+Instagram account — warm candlelit tavern atmosphere, soft loose brushwork,
+painterly impasto texture, aged canvas grain, rich amber and deep indigo
+tones, whimsical and inviting, reminiscent of a hand-painted inn sign or
+storybook cover. NOT a cartoon, NOT flat vector art — painted, warm,
+dimensional. Square 1:1 format. NO text or letters in the image.
+STRICT COLOUR PALETTE — matches the Lantern app's color scheme, washed out
+and desaturated as if printed on aged paper. Use ONLY these tones, no others:
+  • Near-black slate  #0D1117  — backgrounds, deep shadow (app: gray-950)
+  • Dark stone        #1C2333  — walls, secondary surfaces (app: gray-900)
+  • Warm parchment    #C8C0A8  — light areas, faces, paper (app: gray-100 muted)
+  • Faded indigo      #6060A0  — primary accent, UI glow (app: indigo-600 washed)
+  • Dusty sky blue    #3A6A88  — ISO 27001 elements (app: sky-700 faded)
+  • Muted amber       #A07030  — NIS2 / fire / lantern glow (app: amber-600 faded)
+  • Brick rose        #883A48  — HIPAA / danger / warning (app: rose-600 faded)
+  • Sage teal         #2A7A58  — GDPR / nature / growth (app: emerald-600 faded)
+All colors desaturated ~35% and darkened slightly vs the app originals, as if
+viewed through a warm dusty filter or printed on aged newsprint. No vivid
+neon, no pure white, no fully saturated hues anywhere.
+
+MASTER CHARACTER DESCRIPTION (include in every prompt that features him)
+------------------------------------------------------------------------
+The hero: a whimsical elderly wizard with a very long flowing white beard,
+a tall crooked pointy hat in faded deep indigo with a slight slouch, and a
+long flowing robe in dusty indigo-purple with amber trim and worn patches.
+He carries a gnarled wooden staff topped with a softly glowing amber crystal
+lantern. Round wire spectacles perched on his nose. Warm kind expression,
+slightly bumbling but undeniably wise. Rosy cheeks, expressive bushy white
+eyebrows. Painted in a loose warm Golden Frog Inn oil-painting style —
+soft brushwork, rich candlelit depth, aged canvas texture. Colors from the
+washed-out palette: faded indigo robes, amber lantern-glow, warm parchment
+beard and skin, brick rose accent details, near-black slate shadows.
+This same wizard appears in EVERY image — he is the consistent protagonist
+of the Lantern compliance adventure.
+
+
+================================================================================
+  SECTION 1 — LANDING PAGE
+================================================================================
+
+FILE: public/hero.png
+DIMENSIONS: 800x800px (or 1200x600px landscape for wider hero layouts)
+PLACEMENT: Landing page, large hero image right of the headline
+
+PROMPT:
+Full-body painting of the Lantern wizard — long white beard, tall
+crooked indigo pointy hat, flowing robes, gnarled staff with a glowing amber
+crystal lantern on top — standing at the entrance of a vast dark dungeon.
+Warm amber staff-glow illuminates his kind face and the stone walls around
+him. Ahead stretch branching dungeon corridors marked with glowing compliance
+shields. He looks delighted and slightly wide-eyed with wonder. Epic cozy
+sense of adventure. Whimsical Golden Frog Inn style, warm candlelit, grainy
+warm candlelit, soft loose brushwork, aged canvas texture, dark stone dungeon,
+washed-out palette, NO text.
+
+
+================================================================================
+  SECTION 2 — FEATURE ICONS  (landing page, 4 cards)
+================================================================================
+
+FILE: public/icons/feature-list.png  (256x256px)
+PLACEMENT: Landing page "List view" feature card
+
+PROMPT:
+Square icon. The Lantern wizard crouching over a large open scroll/
+checklist unfurled on a dungeon floor. He holds his lantern above it,
+illuminating rows of items he is ticking off with a quill. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), warm amber glow,
+NO text.
+
+------
+
+FILE: public/icons/feature-matrix.png  (256x256px)
+PLACEMENT: Landing page "Coverage matrix" feature card
+
+PROMPT:
+Square icon. The Lantern wizard standing in front of a large stone wall
+engraved with a grid/table. Each cell in the grid glows with a different
+colored gem (blue, indigo, amber, red, green). He points to cells with a
+torch. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), dungeon stone wall, bold ink outlines,
+NO text.
+
+------
+
+FILE: public/icons/feature-charts.png  (256x256px)
+PLACEMENT: Landing page "Radar & charts" feature card
+
+PROMPT:
+Square icon. The Lantern wizard holding his lantern over a magical circular
+map inscribed on the floor — a glowing radar/pentagram diagram with five
+colored spokes radiating outward. He studies it intently. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), glowing magical floor diagram,
+NO text.
+
+------
+
+FILE: public/icons/feature-export.png  (256x256px)
+PLACEMENT: Landing page "Export & import" feature card
+
+PROMPT:
+Square icon. The Lantern wizard carefully placing a rolled scroll into a
+magical glowing chest. A second scroll floats out from the chest toward him.
+The chest has runes on the lid and a padlock. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal),
+warm amber glow, NO text.
+
+
+================================================================================
+  SECTION 3 — FRAMEWORK BADGES  (onboarding cards, 5 frameworks)
+================================================================================
+
+FILE: public/icons/fw-iso27001.png  (256x256px)
+COLOR THEME: Sky blue
+PLACEMENT: ISO 27001 framework card on the onboarding screen
+
+PROMPT:
+Square badge icon. A sky-blue heraldic shield with a golden compass rose
+at its center, surrounded by a ring of interlocking chain links suggesting
+a system of controls. The shield floats in a stone alcove lit by blue
+torchlight. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette,
+NO text.
+
+------
+
+FILE: public/icons/fw-soc2.png  (256x256px)
+COLOR THEME: Indigo
+PLACEMENT: SOC 2 framework card on the onboarding screen
+
+PROMPT:
+Square badge icon. An indigo heraldic shield bearing a balance scale at its
+center — one pan holds a lock, the other holds a document. The shield rests
+on a stone pedestal with an audit ledger open beside it. D&D crest style,
+NO text.
+
+------
+
+FILE: public/icons/fw-nis2.png  (256x256px)
+COLOR THEME: Amber/gold
+PLACEMENT: NIS2 framework card on the onboarding screen
+
+PROMPT:
+Square badge icon. An amber-gold heraldic shield shaped like the EU flag circle
+of stars, bearing crossed swords and a castle tower at the center. Glowing
+amber light, fortified wall background. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette,
+NO text.
+
+------
+
+FILE: public/icons/fw-hipaa.png  (256x256px)
+COLOR THEME: Rose/red
+PLACEMENT: HIPAA framework card on the onboarding screen
+
+PROMPT:
+Square badge icon. A rose-red heraldic shield bearing a caduceus (medical
+staff with two serpents) at its center, surrounded by a protective magical
+aura. Stone dungeon background with red torchlight. D&D crest style,
+NO text.
+
+------
+
+FILE: public/icons/fw-gdpr.png  (256x256px)
+COLOR THEME: Emerald green
+PLACEMENT: GDPR framework card on the onboarding screen
+
+PROMPT:
+Square badge icon. An emerald-green heraldic shield bearing a stylized eye
+(representing oversight/data rights) at its center, surrounded by a ring of
+laurel leaves. The shield emits a gentle green glow. D&D crest style,
+NO text.
+
+
+================================================================================
+  SECTION 4 — CONTROL IMAGES  (one per control, shown in list / detail drawer)
+  All images: 256x256px square. All feature the same wizard.
+================================================================================
+
+---- DOMAIN: Incident Response ----
+
+FILE: public/controls/INC-MGT.png
+CONTROL: Incident Management Programme
+
+PROMPT:
+The Lantern wizard stands at a war-room table covered in dungeon maps,
+quill plans, and flagged scrolls. He points to a large "INCIDENT RESPONSE
+PLAN" map unrolled on the table. Other painted figures (the team) look on.
+His glowing lantern hangs above like a chandelier. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT.png
+CONTROL: Security Incident Reporting
+
+PROMPT:
+The Lantern wizard rushes breathlessly toward a pair of castle guards,
+holding up a crumpled "urgent message" scroll. His hat is askew and his
+lantern swings wildly. The guards look alarmed and reach for the scroll. Stone
+dungeon corridor. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT-NIS2.png
+CONTROL: NIS2 — Early Warning within 24h
+
+PROMPT:
+The Lantern wizard atop a stone tower at night, frantically lighting a
+giant beacon fire. The fire blazes orange against a dark sky. An hourglass
+with a tiny amount of sand left sits at his feet. Urgent, dynamic pose.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT-NIS2-72.png
+CONTROL: NIS2 — Incident Notification within 72h
+
+PROMPT:
+The Lantern wizard tying a sealed scroll (marked with a wax seal) to the
+leg of a large raven messenger bird. The raven is perched on a tower ledge,
+ready to fly. Three hourglasses line up behind him, two already empty.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT-NIS2-FINAL.png
+CONTROL: NIS2 — Final Incident Report within 1 Month
+
+PROMPT:
+The Lantern wizard standing before a formal panel of robed officials in a
+grand hall, presenting a thick bound report / tome. He looks proud and
+slightly exhausted — this took a while. A large calendar on the wall shows
+one page remaining. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT-GDPR-SA.png
+CONTROL: GDPR — Supervisory Authority Notification
+
+PROMPT:
+The Lantern wizard handing a large sealed envelope stamped with an
+official crest to a stern magistrate judge seated at a high bench. A tall
+official candle burns beside the judge. The wizardlooks respectful and
+timely. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT-GDPR-DS.png
+CONTROL: GDPR — Data Subject Communication
+
+PROMPT:
+The Lantern wizard nailing "Important Notice" parchments to a town
+announcement board in a stone dungeon plaza. Concerned villagers
+gather around to read the notices. His lantern illuminates the board.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT-HIPAA-IND.png
+CONTROL: HIPAA — Individual Breach Notification within 60 Days
+
+PROMPT:
+The Lantern wizard going door-to-door in a dungeon village, personally
+handing rolled letters to individual townspeople who open their doors in
+surprise. He carries a large satchel full of letters. A calendar on a nearby
+wall counts down 60 days. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-RPT-HIPAA-HHS.png
+CONTROL: HIPAA — HHS Secretary Notification
+
+PROMPT:
+The Lantern wizard presenting a census scroll (with tallies of people
+affected — shown as tally marks in two groups, large and small) to a royal
+herald. The herald sits beside a two-drawer cabinet labeled "Annual Filing"
+and "Immediate." Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-LEARN.png
+CONTROL: Post-Incident Review and Lessons Learned
+
+PROMPT:
+The Lantern wizard and his companions sitting around a campfire in a
+dungeon clearing after a battle. Scorched stone walls around them. The
+wizard holds a quill and draws a "what went wrong" diagram on a flat
+rock. Everyone looks thoughtfully at a skull of the defeated enemy nearby.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-CONTINUITY.png
+CONTROL: Business Continuity and Disaster Recovery
+
+PROMPT:
+The Lantern wizard discovering a secret alternate escape tunnel behind a
+crumbling dungeon wall — revealed when a cave-in blocked the main path. He
+holds his lantern into the tunnel opening with a relieved smile. A backup
+map in his hand. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/INC-CONTINUITY-TEST.png
+CONTROL: Contingency Plan Testing
+
+PROMPT:
+The Lantern wizard sprinting through a timed obstacle course (ropes,
+barriers, fire pits) inside a training dungeon while a wizard watches with a
+magical hourglass/stopwatch. A ranked priority list ("Critical / High /
+Medium" as three colored banners) hangs on the wall. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: Access Control ----
+
+FILE: public/controls/AC-POLICY.png
+CONTROL: Access Control Policy
+
+PROMPT:
+The Lantern wizard holding open a thick rulebook to a pair of guards at a
+massive iron castle gate. The guards study the book carefully before turning
+the gate wheel. The rulebook has a lock-shaped emblem on the cover.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-POLICY-MINNEC.png
+CONTROL: HIPAA — Minimum Necessary Standard
+
+PROMPT:
+The Lantern wizard reaching toward a potion shelf but stopping his hand at
+exactly one small vial — ignoring the larger bottles nearby. A strict
+apothecary watches and nods approvingly. A "Take Only What You Need" sign
+is depicted as a symbolic "less = better" visual on the shelf.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-POLICY-DATAMIN.png
+CONTROL: GDPR — Data Minimisation
+
+PROMPT:
+The Lantern wizard packing a travel bag. He carefully puts in only three
+essential items (a sword, a map, a potion) and firmly sets aside a large pile
+of unnecessary gear. The rejected pile is covered with a red X symbol.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-IDM.png
+CONTROL: Identity Management and Provisioning
+
+PROMPT:
+The Lantern wizard receiving an official guild membership badge / token
+from a guild master behind a desk. The guild master stamps a "PROVISIONED"
+seal on a scroll with the wizard's name on it. Other guild members'
+portraits line the wall. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-PRIV.png
+CONTROL: Privileged Access Management
+
+PROMPT:
+The Lantern wizard approaching a heavily fortified vault guarded by
+multiple locks. He holds a special golden key on a separate keyring kept in a
+sealed glass case. Two guards watch attentively as he approaches with careful
+ceremony. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-AUTH.png
+CONTROL: Authentication Controls
+
+PROMPT:
+The Lantern wizard at a door showing three simultaneous proofs of identity
+to a suspicious guard: raising his lantern (factor 1), pressing a sigil ring
+to the door (factor 2), and whispering a phrase (factor 3). The guard checks
+all three against a list. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-AUTH-MFA.png
+CONTROL: Multi-Factor Authentication
+
+PROMPT:
+The Lantern wizard holding out THREE glowing tokens simultaneously — a
+physical brass key, a magical sigil ring emitting light, and a floating
+scroll that regenerates a new rune every few seconds (TOTP style). A gate
+opens only when all three glow. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-AUTH-PASSWD.png
+CONTROL: Password and Credential Management
+
+PROMPT:
+The Lantern wizard carefully writing a complex secret passphrase onto a
+scroll with a quill, then sealing it shut with wax and locking it in a small
+strongbox. He burns the scratch paper in a nearby candle flame.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-REVIEW.png
+CONTROL: Access Rights Review
+
+PROMPT:
+The Lantern wizard as a guild master, seated at a desk reviewing a long
+roster list of guild members. He crosses out names of those who no longer need
+access with a red quill. A stack of revoked badges sits on the corner of the
+desk. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-LOG.png
+CONTROL: Audit Logging and Monitoring
+
+PROMPT:
+The Lantern wizard in a tall watchtower, writing furiously in a massive
+ledger book. Below him, the dungeon corridors are visible, and he records
+every person who passes. His lantern illuminates the ledger page. A looking
+glass (telescope) leans against the wall. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal),
+NO text.
+
+------
+
+FILE: public/controls/AC-ENCRYPT.png
+CONTROL: Encryption
+
+PROMPT:
+The Lantern wizard bent over a desk, rewriting the letters of a plain
+scroll into a strange jumble of magical runes and glyphs. The original plain
+scroll is on the left; the scrambled encrypted scroll is on the right. He
+grins as the message becomes unreadable. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal),
+NO text.
+
+------
+
+FILE: public/controls/AC-ENCRYPT-TRANSIT.png
+CONTROL: Encryption in Transit
+
+PROMPT:
+The Lantern wizard watching a sealed letter fly through the air inside
+a glowing magical protective bubble — like a translucent golden sphere
+encasing the envelope mid-flight. Shadowy figures try to grab it but the
+bubble repels them. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/AC-ENCRYPT-REST.png
+CONTROL: Encryption at Rest
+
+PROMPT:
+The Lantern wizard locking a treasure chest. As the lock clicks shut,
+the contents inside the chest transform before our eyes from readable scrolls
+into jumbled scrambled symbols — visible through a magical glass panel on the
+chest's side. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/KEY-MGMT.png
+CONTROL: Cryptographic Key Management
+
+PROMPT:
+The Lantern wizard as a key-master, holding an ornate magical keyring
+with multiple glowing keys of different shapes and colors. He hangs them on
+carefully labeled hooks inside a secure vault. One key is being rotated —
+old key going in a fire, new key being forged. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/NETWORK-SEG.png
+CONTROL: Network Security and Segmentation
+
+PROMPT:
+The Lantern wizard building stone walls and filling moats inside a dungeon,
+dividing it into isolated walled sections. Each section has its own gate and
+guard. He lays a blueprint showing the segmented zones on the ground as he
+builds. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: Risk Management ----
+
+FILE: public/controls/RISK-MGMT.png
+CONTROL: Risk Management Process
+
+PROMPT:
+The Lantern wizard crouched over a large dungeon map spread on the floor,
+marking dangerous zones with red skull icons, trap locations with yellow
+warning runes, and safe paths with green arrows. His expression is focused
+and methodical. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/VULN-MGMT.png
+CONTROL: Vulnerability and Patch Management
+
+PROMPT:
+The Lantern wizard patching cracks and holes in dungeon walls where
+monsters are trying to squeeze through. He works urgently with a trowel and
+sack of repair materials, prioritizing the largest cracks first. A list of
+holes ranked by size (depicted as three colored priority flags) sits nearby.
+Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/CHG-MGMT.png
+CONTROL: Change Management
+
+PROMPT:
+The Lantern wizard presenting a construction blueprint to a committee of
+three wizards who each need to sign off on it before he can modify the dungeon
+wall. One wizard approves it, one inspects it, one stamps it with a seal.
+Nothing can change without all three signatures. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/ASSET-MGMT.png
+CONTROL: Information Asset Inventory and Classification
+
+PROMPT:
+The Lantern wizard inside a treasure room, methodically cataloguing every
+item into a giant ledger book. Each treasure is tagged with a colored label
+(red = highly sensitive, yellow = important, green = low risk). He works
+systematically from shelf to shelf. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: Data Governance ----
+
+FILE: public/controls/DATA-RETAIN.png
+CONTROL: Data Retention and Secure Deletion
+
+PROMPT:
+The Lantern wizard at a fireplace burning old outdated scrolls, while
+carefully placing important scrolls (with a crown stamp = keeper) onto an
+archive shelf beside him. He consults a calendar/schedule to know which is
+which. The fire is bright and satisfying. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal),
+NO text.
+
+------
+
+FILE: public/controls/GDPR-ROPA.png
+CONTROL: Records of Processing Activities (RoPA)
+
+PROMPT:
+The Lantern wizard sitting at a desk maintaining a huge master ledger
+— every page is a record of who processed what, when, and why. The book is
+enormous and well-organized with colored tabs on the side. He looks meticulous
+and proud of the record. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/GDPR-DPIA.png
+CONTROL: Data Protection Impact Assessment (DPIA)
+
+PROMPT:
+The Lantern wizard standing before a glowing crystal ball (an oracle)
+before entering a dangerous new dungeon area. The crystal ball shows him
+swirling images of potential risks ahead. He takes notes on a scroll as the
+oracle speaks. He won't enter until the assessment is complete. Golden Frog
+Inn oil-painting style, warm candlelit, soft loose brushwork, washed-out
+palette, NO text.
+
+------
+
+FILE: public/controls/GDPR-RIGHTS.png
+CONTROL: Data Subject Rights Fulfilment
+
+PROMPT:
+The Lantern wizard staffing a help desk inside the dungeon — a wooden
+booth with a sign showing icons for: viewing a scroll (access), editing a
+scroll (rectification), burning a scroll (erasure), and carrying a scroll
+(portability). A queue of villagers waits patiently. He helps each
+one. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: People Security ----
+
+FILE: public/controls/TRAIN.png
+CONTROL: Security Awareness and Training
+
+PROMPT:
+The Lantern wizard at the front of a dungeon classroom, pointing to a
+chalkboard/stone tablet that shows security diagrams (lock, shield, eye,
+warning symbol). A group of new recruits in novice robes sit at
+stone desks, taking notes with quills. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal),
+NO text.
+
+------
+
+FILE: public/controls/TRAIN-HIPAA-REMINDERS.png
+CONTROL: HIPAA — Periodic Security Reminders
+
+PROMPT:
+The Lantern wizard walking through dungeon corridors, posting "Stay
+Alert!" parchment notices on every wall and door along the route. He carries
+a large roll of parchment and a pot of paste. Cartoon colleagues see the
+notices and look reminded/informed. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/TRAIN-HIPAA-MALWARE.png
+CONTROL: Malicious Software Protection Training
+
+PROMPT:
+The Lantern wizard teaching a class of recruits to identify disguised
+enemy potions — identical-looking bottles where one has a tiny skull on it.
+He holds up the poisoned bottle with gloves and points to the warning signs.
+The recruits lean in to study the difference. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal),
+NO text.
+
+------
+
+FILE: public/controls/TRAIN-HIPAA-LOGIN.png
+CONTROL: Log-in Monitoring Awareness Training
+
+PROMPT:
+The Lantern wizard teaching recruits how to spot a shapeshifter / impostor
+trying to enter the guild hall — the shapeshifter looks almost identical to a
+real member but the lantern light reveals the disguise (a subtle flicker, a
+shadow wrong). Recruits learn to look carefully. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: Supply Chain ----
+
+FILE: public/controls/VENDOR.png
+CONTROL: Supplier and Third-Party Security
+
+PROMPT:
+The Lantern wizard carefully inspecting a merchant's cart of goods before
+accepting delivery. He checks each crate, reads the merchant's credentials
+scroll, and peers at items with a magnifying glass. The merchant watches
+patiently. Behind the merchant, their own supplier waits in line for the same
+inspection. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: Data Governance (new) ----
+
+FILE: public/controls/GDPR-CONSENT.png
+CONTROL: Consent Management
+
+PROMPT:
+The Lantern wizard offering an unfurled scroll of agreement to a thoughtful
+villager who reads it carefully before pressing a signet ring to its seal.
+The moment the seal is pressed freely, the scroll edges shimmer with a soft
+sage-teal glow signaling true consent. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/GDPR-TRANSPARENCY.png
+CONTROL: Privacy Notice and Transparency Obligations
+
+PROMPT:
+The Lantern wizard standing at a tall arched window, drawing back heavy
+velvet curtains to reveal a sunlit reading room full of open ledgers and
+welcoming benches. A small group of visitors steps inside to read the records
+laid out plainly on the tables. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/GDPR-ACCOUNTABILITY.png
+CONTROL: Controller Accountability and Governance
+
+PROMPT:
+The Lantern wizard stands before a long council table of robed elders,
+presenting an enormous bound ledger open to a page of meticulous records.
+He gestures toward stacks of policies and signed evidence arrayed beside
+him, calm and prepared. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/GDPR-JOINT-CTRL.png
+CONTROL: Joint Controller Arrangements
+
+PROMPT:
+The Lantern wizard and a second hooded wizard lean over a long shared
+scroll at a round oak table, each holding a quill, drawing a line down the
+middle to divide responsibilities. Their two lanterns rest together at the
+scroll's centre, casting a single overlapping glow. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: Supply Chain (continued) ----
+
+FILE: public/controls/BAA-CONTENT.png
+CONTROL: Business Associate Contract Content Requirements
+
+PROMPT:
+The Lantern wizard hunched over a writing desk by candlelight, carefully
+inscribing a long detailed partnership contract with a quill. Wax seals,
+ribbons, and a stack of supporting clauses lie neatly beside him as he
+itemises each obligation. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+FILE: public/controls/HIPAA-GHP.png
+CONTROL: Group Health Plan Security Requirements
+
+PROMPT:
+The Lantern wizard standing among a small gathered guild of villagers
+inside a stone hall, helping them plan their collective defences around a
+shared map of their settlement. He hands out matching protective amulets to
+each member of the group. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+---- DOMAIN: Incident Response (continued) ----
+
+FILE: public/controls/NIS2-RECIPIENT-NOTIFY.png
+CONTROL: NIS2 — Service Recipient Notification
+
+PROMPT:
+The Lantern wizard atop a windswept tower battlement at dusk, releasing a
+flock of messenger ravens each carrying a tiny sealed scroll. The birds
+scatter toward distant lantern-lit villages on the horizon, carrying warnings
+ahead of an approaching storm. Golden Frog Inn oil-painting style, warm candlelit, soft loose brushwork, aged canvas texture, washed-out palette (near-black slate, faded indigo, muted amber glow, warm parchment, brick rose, sage teal), NO text.
+
+------
+
+
+================================================================================
+  APPENDIX — RECOMMENDED AI IMAGE TOOLS
+================================================================================
+
+Best results with:
+  • Midjourney v7        — best for the painterly look; use --style raw and
+                            --ar 1:1; use --cref to lock the wizard character
+                            after the first image; try --stylize 200-400
+  • ChatGPT / DALL-E 4   — add "oil painting, impasto, Golden Frog Inn style"
+                            and "same wizard character as before" in follow-ups
+  • Adobe Firefly         — use "Generative Fill" with painting style preset
+  • Gemini Imagen 3       — add "oil painting, soft brushwork, candlelit" to prompt
+
+WORKFLOW TIP:
+  1. Generate the wizard character first (use the HERO prompt above)
+  2. In Midjourney: save hero as --cref URL; paste into every subsequent prompt
+  3. In ChatGPT: use "same wizard as in the previous image, same warm
+     oil-painting style" in every follow-up
+  4. Keep the CONSISTENT STYLE block copy-pasted at the start of every prompt
+  5. If it looks too photorealistic, add: "storybook illustration, painterly,
+     not photographic" to steer it back toward the Golden Frog Inn aesthetic
+  6. If colors look too vivid, add: "muted, desaturated, aged canvas, washed out"
+
+FILE PLACEMENT SUMMARY:
+  public/hero.png                      ← Landing page hero
+  public/icons/feature-*.png           ← Landing page feature cards (4 files)
+  public/icons/fw-*.png                ← Onboarding framework badges (5 files)
+  public/controls/*.png                ← Control images, one per control ID (40 files)
+
+================================================================================
