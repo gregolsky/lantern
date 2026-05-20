@@ -8,11 +8,11 @@ Multi-framework compliance tracker — a client-side PWA that lets you track you
 
 | Framework | Coverage |
 |-----------|----------|
-| ISO 27001:2022 | Controls A.5–A.8 (93 controls) |
-| SOC 2 (TSC 2017) | CC, A, C, PI, P criteria |
-| NIS2 Directive | Article 21 measures |
-| GDPR | Articles 5, 13–17, 25, 32–36 |
-| HIPAA | Security Rule safeguards |
+| ISO 27001:2022 | All 93 Annex A controls (A.5–A.8) |
+| SOC 2 (TSC 2017/2022) | All 61 Trust Services Criteria (CC, A, C, PI, P) |
+| NIS2 Directive | Articles 21 & 23 — 18 controls |
+| GDPR | Articles 5–7, 9, 12–18, 20–22, 24–26, 28, 30, 32–35, 37–39, 44–46 — 29 controls |
+| HIPAA Security Rule | §164.308–316 — 64 controls |
 
 ## Features
 
