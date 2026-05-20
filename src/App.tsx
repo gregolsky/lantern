@@ -100,15 +100,13 @@ export default function App() {
       {/* Header */}
       <header className="border-b border-gray-800 bg-gray-900 sticky top-0 z-30">
         <div className="max-w-6xl mx-auto px-4 py-3">
-          <div className="flex items-center gap-4 mb-3">
+          {/* Row 1: logo + view tabs */}
+          <div className="flex items-center gap-3 mb-3">
             <div className="flex items-center gap-2">
               <span className="text-lg font-bold text-indigo-400">🪔 Lantern</span>
               <span className="text-xs text-gray-500 hidden sm:inline">Multi-framework compliance tracker</span>
             </div>
             <div className="flex-1" />
-            <div className="text-xs text-gray-400">
-              {doneControls}/{totalControls} controls done
-            </div>
             <div className="flex gap-1">
               {(["list", "matrix", "charts"] as ViewMode[]).map((mode) => (
                 <button
@@ -120,7 +118,23 @@ export default function App() {
                 </button>
               ))}
             </div>
-            <div className="flex gap-1">
+          </div>
+
+          {/* Row 2: framework filter + search + export/import + done counter */}
+          <div className="flex flex-wrap items-center gap-2">
+            <FrameworkFilter selectedFrameworks={selectedFrameworks} onToggle={toggleFramework} />
+            <div className="flex-1" />
+            {viewMode === "list" && (
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search controls…"
+                className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 w-full sm:w-48"
+              />
+            )}
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-500">{doneControls}/{totalControls} done</span>
               <button onClick={handleExport} className="px-2.5 py-1 rounded text-xs text-gray-400 hover:text-gray-200 border border-gray-700">
                 Export
               </button>
@@ -132,20 +146,6 @@ export default function App() {
               </button>
               <input ref={importRef} type="file" accept=".json" className="hidden" onChange={handleImport} />
             </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-3">
-            <FrameworkFilter selectedFrameworks={selectedFrameworks} onToggle={toggleFramework} />
-            <div className="flex-1 hidden sm:block" />
-            {viewMode === "list" && (
-              <input
-                type="search"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search controls…"
-                className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-1 text-sm text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 w-full sm:w-56"
-              />
-            )}
           </div>
 
           {viewMode === "list" && (

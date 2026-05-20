@@ -53,9 +53,9 @@ export function DetailDrawer({ control, done, note, activeFrameworks, onClose, o
   );
 
   return (
-    <div className="fixed inset-0 z-40 flex justify-end" onClick={onClose}>
+    <div className="fixed inset-0 z-40 flex justify-end overflow-hidden" onClick={onClose}>
       <div
-        className="w-full max-w-xl bg-gray-900 border-l border-gray-700 flex flex-col h-full shadow-2xl overflow-y-auto"
+        className="w-full max-w-xl bg-gray-900 border-l border-gray-700 flex flex-col h-full shadow-2xl overflow-y-auto overflow-x-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -98,9 +98,9 @@ export function DetailDrawer({ control, done, note, activeFrameworks, onClose, o
                   const mapping = control.frameworks[fwId]!;
                   return (
                     <div key={fwId} className="rounded-lg border border-gray-700 overflow-hidden">
-                      <div className={`${meta.color.bg} px-3 py-1.5 flex items-center justify-between`}>
-                        <span className={`text-xs font-semibold ${meta.color.text}`}>{meta.label}</span>
-                        <div className="flex gap-1 flex-wrap">
+                      <div className={`${meta.color.bg} px-3 py-1.5 flex flex-wrap items-center gap-x-2 gap-y-1`}>
+                        <span className={`text-xs font-semibold ${meta.color.text} shrink-0`}>{meta.label}</span>
+                        <div className="flex gap-1 flex-wrap min-w-0">
                           {mapping.refs.map((ref) => (
                             <span key={ref} className={`text-[10px] px-1.5 py-0.5 rounded bg-black/20 ${meta.color.text} font-mono`}>
                               {ref}

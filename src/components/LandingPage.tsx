@@ -103,7 +103,7 @@ export function LandingPage({ onGetStarted }: Props) {
               }}
             />
             {/* Glow overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/60 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-gray-950/20 to-transparent pointer-events-none" />
           </div>
         </div>
       </section>
