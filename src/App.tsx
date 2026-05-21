@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import type { Control, FrameworkId, ViewMode } from "./types";
 import { FRAMEWORK_ORDER } from "./data/frameworks";
 import { useUserStore } from "./state/userStore";
@@ -11,6 +11,7 @@ import { ChartsView } from "./components/ChartsView";
 import { Onboarding } from "./components/Onboarding";
 import { LandingPage } from "./components/LandingPage";
 import seedData from "./data/controls.seed.json";
+import { buildControlsCsv } from "./utils/exportCsv";
 
 const ALL_CONTROLS = seedData as Control[];
 
@@ -34,7 +35,20 @@ export default function App() {
   const [filterFramework, setFilterFramework] = useState<FrameworkId | null>(null);
   const [viewMode, setViewMode] = useState<ViewMode>("list");
   const [searchQuery, setSearchQuery] = useState("");
+  const [exportOpen, setExportOpen] = useState(false);
+  const exportMenuRef = useRef<HTMLDivElement>(null);
   const importRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!exportOpen) return;
+    function handleClick(e: MouseEvent) {
+      if (exportMenuRef.current && !exportMenuRef.current.contains(e.target as Node)) {
+        setExportOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [exportOpen]);
 
   const visibleControls = useMemo(() => {
     return ALL_CONTROLS.filter((c) => {
@@ -88,6 +102,18 @@ export default function App() {
     a.download = "lantern-state.json";
     a.click();
     URL.revokeObjectURL(url);
+  }
+
+  function handleExportCsv() {
+    const csv = buildControlsCsv(ALL_CONTROLS, checks, notes, selectedFrameworks);
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `lantern-controls-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+    setExportOpen(false);
   }
 
   function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
@@ -154,9 +180,30 @@ export default function App() {
             )}
             <div className="flex items-center gap-2">
               <span className="text-xs text-gray-500">{doneControls}/{totalControls} done</span>
-              <button onClick={handleExport} className="px-2.5 py-1 rounded text-xs text-gray-400 hover:text-gray-200 border border-gray-700">
-                Export
-              </button>
+              <div className="relative" ref={exportMenuRef}>
+                <button
+                  onClick={() => setExportOpen((o) => !o)}
+                  className="px-2.5 py-1 rounded text-xs text-gray-400 hover:text-gray-200 border border-gray-700"
+                >
+                  Export ▾
+                </button>
+                {exportOpen && (
+                  <div className="absolute right-0 mt-1 bg-gray-900 border border-gray-800 rounded shadow-lg z-50 min-w-max">
+                    <button
+                      onClick={handleExportCsv}
+                      className="block w-full text-left px-4 py-2 text-xs text-gray-300 hover:bg-gray-800"
+                    >
+                      Export CSV (spreadsheet)
+                    </button>
+                    <button
+                      onClick={() => { handleExport(); setExportOpen(false); }}
+                      className="block w-full text-left px-4 py-2 text-xs text-gray-300 hover:bg-gray-800"
+                    >
+                      Export JSON (full state)
+                    </button>
+                  </div>
+                )}
+              </div>
               <button
                 onClick={() => importRef.current?.click()}
                 className="px-2.5 py-1 rounded text-xs text-gray-400 hover:text-gray-200 border border-gray-700"
