@@ -1,34 +1,40 @@
 import type { Control, FrameworkId, UserControlState } from "../types";
 import { FRAMEWORK_ORDER } from "../data/frameworks";
 
+// Wide format: one row per control, with per-framework columns side by side.
+// Framework columns only appear for the user's selectedFrameworks (in FRAMEWORK_ORDER).
 export function buildControlsCsv(
   controls: Control[],
   checks: Record<string, UserControlState>,
   notes: Record<string, string>,
   selectedFrameworks: FrameworkId[],
 ): string {
+  const activeFws = FRAMEWORK_ORDER.filter((f) => selectedFrameworks.includes(f));
+
   const header = [
-    "Control ID", "Title", "Domain", "Parent ID",
-    "Framework", "Refs", "Summary", "Threshold", "Citation",
-    "Done", "Updated At", "Notes", "Description",
+    "Control ID", "Title", "Domain", "Parent ID", "Description",
+    "Done", "Updated At", "Notes",
+    ...activeFws.flatMap((f) => [`${f} Refs`, `${f} Summary`, `${f} Threshold`, `${f} Citation`]),
   ];
   const rows: string[][] = [header];
 
   for (const c of controls) {
-    for (const fwId of FRAMEWORK_ORDER) {
-      if (!selectedFrameworks.includes(fwId)) continue;
-      const m = c.frameworks[fwId];
-      if (!m) continue;
-      const state = checks[c.id];
-      rows.push([
-        c.id, c.title, c.domain, c.parentId ?? "",
-        fwId, m.refs.join(";"), m.summary ?? "", m.threshold ?? "", m.citation ?? "",
-        state?.done ? "yes" : "no",
-        state?.updatedAt ?? "",
-        notes[c.id] ?? "",
-        c.description ?? "",
-      ]);
-    }
+    const hasAny = activeFws.some((f) => !!c.frameworks[f]);
+    if (!hasAny) continue;
+    const state = checks[c.id];
+    const fwCols = activeFws.flatMap((f) => {
+      const m = c.frameworks[f];
+      return m
+        ? [m.refs.join(";"), m.summary ?? "", m.threshold ?? "", m.citation ?? ""]
+        : ["", "", "", ""];
+    });
+    rows.push([
+      c.id, c.title, c.domain, c.parentId ?? "", c.description ?? "",
+      state?.done ? "yes" : "no",
+      state?.updatedAt ?? "",
+      notes[c.id] ?? "",
+      ...fwCols,
+    ]);
   }
   return rows.map(r => r.map(csvField).join(",")).join("\r\n");
 }
